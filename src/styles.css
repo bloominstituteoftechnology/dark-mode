@@ -120,7 +120,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
 }
 table {
@@ -136,7 +136,7 @@ table {
 
 html {
   font-size: 62.5%;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 500;
 }
 
@@ -225,4 +225,9 @@ img {
 
 .coin__logo {
   width: 50px;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
 }
