@@ -226,3 +226,8 @@ img {
 .coin__logo {
   width: 50px;
 }
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
