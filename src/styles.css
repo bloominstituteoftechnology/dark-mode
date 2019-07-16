@@ -228,6 +228,7 @@ img {
 }
 
 .dark-mode {
-  background-color: black;
+  background-color: rgb(45, 29, 57);
   color: white;
+  transition-duration: 0.6s;
 }
