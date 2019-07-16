@@ -185,6 +185,11 @@ img {
   width: 40px;
 }
 
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
 .toggle {
   background: #f68819;
   border-radius: 50px;
