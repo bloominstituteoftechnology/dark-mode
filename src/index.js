@@ -9,6 +9,7 @@ import "./styles.css";
 
 const App = () => {
   const [coinData, setCoinData] = useState([]);
+  
 
   useEffect(() => {
     axios
