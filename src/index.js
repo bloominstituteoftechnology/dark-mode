@@ -23,7 +23,7 @@ const App = () => {
       <Navbar />
       <Charts coinData={coinData} />
     </div>
-  );
+  ); 
 };
 
 const rootElement = document.getElementById("root");
