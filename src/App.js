@@ -1,15 +1,16 @@
 import React from 'react';
+
 import './App.css';
-import useLocalStorage from './hooks/useLocalStorage';
-import useDarkMode from './hooks/useDarkMode';
+import NavBar from './components/Navbar';
+import Chart from './components/Chart';
 
 
 
 function App() {
-  const [name, setName] = useLocalStorage('name', "Carlos");
   return (
     <div className="App">
-      <useDarkMode />
+      <NavBar />
+      <Chart />
     </div>
   );
 }
