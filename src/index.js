@@ -10,7 +10,7 @@ import "./styles.scss";
 
 const App = () => {
   const [coinData, setCoinData] = useState([]);
-  const [local, setLocal] = useLocaStorage('testKey', "something else")
+  const [local, setLocal] = useLocaStorage('testKey')
   
 
   useEffect(() => {
