@@ -5,8 +5,7 @@ const useDarkMode = initialValue => {
     const [displayMode, setDisplayMode] = useLocalStorage('Dark Mode', initialValue)
 
     useEffect(() => {
-        const bodyClasses = document.body.classList
-        displayMode ? bodyClasses.add('dark-mode') : bodyClasses.remove('dark-mode')        
+        displayMode ? document.body.classList.add('dark-mode') : document.body.classListlasses.remove('dark-mode')        
     }, [displayMode])
 
     return [displayMode, setDisplayMode]
