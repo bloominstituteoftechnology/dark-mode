@@ -6,10 +6,9 @@ export const useDarkMode = (key, initialValue) => {
     return item ? item : initialValue
   })
 
-  const setValue = value => {
+  const setValue = () => {
     setStoredValue(!storedValue)
     localStorage.setItem(key, JSON.stringify(!storedValue))
-    console.log('set value, useLocal', value)
   }
 
   return [storedValue, setValue]
