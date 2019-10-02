@@ -10,7 +10,7 @@ const useDarkMode = (intialValue) => {
             document.body.classList.remove('dark-mode');
         }
     }, [darkMode]);
-    return [darkmode, setDarkMode];
+    return [darkMode, setDarkMode];
 };
 
 export default useDarkMode;
