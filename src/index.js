@@ -28,7 +28,7 @@ const App = () => {
   return (
     <div className={darkMode ? 'dark-mode' : ''}>
       <Navbar darkMode={darkMode} toggleMode={toggleMode}/>
-      <Charts coinData={coinData} />
+      <Charts darkMode={darkMode} coinData={coinData} />
     </div>
   );
 };
