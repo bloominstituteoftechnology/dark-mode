@@ -1,7 +1,11 @@
-import React, { useState } from 'react';
+
+//Removed { useState } from import React
+import React from 'react';
+import { useDarkMode } from "./hooks/useDarkMode";
 
 const Navbar = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  // The state hook here returns a darkMode value, and a setDarkMode function. Isn't that exactly what our useDarkMode hook returns as well? Replace the state hook with our hook, click the toggle, and watch the magic happen!!!
+  const [darkMode, setDarkMode] = useDarkMode(false); // useState(false);
   const toggleMode = e => {
     e.preventDefault();
     setDarkMode(!darkMode);
