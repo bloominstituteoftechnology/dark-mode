@@ -7,8 +7,8 @@ export default function Navbar (props) {
       <h1>Crypto Tracker</h1>
       <div className="dark-mode__toggle">
         <div
-          onClick={props.setMode}
           className={props.mode ? 'toggle toggled' : 'toggle'}
+          onClick={props.setMode}
         />
       </div>
     </nav>

@@ -7,16 +7,26 @@ import Navbar from "./components/Navbar";
 
 import "./styles.scss";
 
-const SetViewMode = (initialValue) => {
-  const [darkMode, setDarkMode] = useState(initialValue);
+const SetViewMode = (key, initialValue) => {
+  const [darkMode, setDarkMode] = useState(() => {
+  const mode = localStorage.getItem(key);
+  
+  if(mode==='true' || mode==='false'){
+    return JSON.parse(mode);
+  }
+  return initialValue;
+});
+
 
   const toggleMode = (e) => {
     e.preventDefault();
 
     if(darkMode) {
       setDarkMode(false);
-    }else {
+      localStorage.setItem(key, false);
+    } else {
       setDarkMode(true);
+      localStorage.setItem(key, true);
     }
   };
 
@@ -25,7 +35,7 @@ const SetViewMode = (initialValue) => {
 
 const App = () => {
   const [coinData, setCoinData] = useState([]);
-  const [mode, setMode] = SetViewMode(false);
+  const [mode, setMode] = SetViewMode('mode',false);
 
   useEffect(() => {
     axios
