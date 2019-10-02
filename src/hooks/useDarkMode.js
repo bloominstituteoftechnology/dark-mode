@@ -12,7 +12,7 @@ export const useDarkMode= (key, initialValue) => {
         } else {
             return document.querySelector('body').classList.remove("dark-mode");
         }
-    })
+    }, [darkMode])
 
     // const handleChanges = event => {
     //     setDarkMode(event.target.value);
