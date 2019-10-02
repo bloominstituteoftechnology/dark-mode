@@ -1,7 +1,7 @@
 import React from "react";
 import Chart from "./Chart";
 
-const Charts = ({ coinData, darkMode }) => {
+const Charts = ({ coinData }) => {
   return (
     <div className="charts">
       {coinData.map(coin => (
@@ -11,7 +11,7 @@ const Charts = ({ coinData, darkMode }) => {
           <div className="coin__logo">
             <img src={coin.image} height="40" alt={coin.name} />
           </div>
-          <Chart darkMode={darkMode} sparklineData={coin.sparkline_in_7d.price} />
+          <Chart sparklineData={coin.sparkline_in_7d.price} />
         </div>
       ))}
     </div>

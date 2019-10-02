@@ -9,7 +9,10 @@ import {
   Tooltip
 } from "recharts";
 
-const Chart = ({ sparklineData, darkMode }) => {
+const Chart = ({ sparklineData }) => {
+
+  const darkMode = false;
+
   const formattedData = sparklineData
     .map((price, idx) => {
       if (idx % 6 === 0) {
