@@ -7,16 +7,20 @@ import Navbar from "./components/Navbar";
 
 import "./styles.scss";
 
-const SetViewMode = (key, initialValue) => {
-  const [darkMode, setDarkMode] = useState(() => {
+const GetLocalData = (key) => {
   const mode = localStorage.getItem(key);
   
   if(mode==='true' || mode==='false'){
     return JSON.parse(mode);
   }
-  return initialValue;
-});
 
+  return null;
+}
+
+const SetViewMode = (key, initialValue) => {
+  const [darkMode, setDarkMode] = useState(() => {
+    return GetLocalData(key) ? GetLocalData(key) : initialValue;
+  });
 
   const toggleMode = (e) => {
     e.preventDefault();
