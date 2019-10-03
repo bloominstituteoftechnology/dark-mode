@@ -1,30 +1,33 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
-import axios from "axios";
+import {BrowserRouter as Router, Route} from "react-router-dom";
 
-import Charts from "./components/Charts";
+// import Charts from "./components/Charts";
 import Navbar from "./components/Navbar";
+import WelcomePage from "./components/WelcomePage";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import ChartPage from "./components/ChartPage";
 
 import "./styles.scss";
 
 const App = () => {
-  const [coinData, setCoinData] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get(
-        "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=true"
-      )
-      .then(res => setCoinData(res.data))
-      .catch(err => console.log(err));
-  }, []);
+  
   return (
     <div className="App">
       <Navbar />
-      <Charts coinData={coinData} />
+      
+
+      <Route exact path='/' render={() => <WelcomePage/>} />
+      <Route path='/charts' render={props => <ChartPage {...props}/>}/>
+      <Route path='/about' render={props => <About {...props}/>}/>
+      <Route path='/contact' render={props => <Contact {...props}/>}/>
     </div>
   );
 };
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(
+  <Router>
+    <App />
+  </Router>, rootElement);
