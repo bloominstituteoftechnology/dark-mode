@@ -242,6 +242,11 @@ text-align: left;
   width: 50px;
 }
 
+.link {
+  text-decoration: none;
+  color: black;
+}
+
 .dark-mode {
   color: #fff;
   background-color: #313843;
@@ -249,5 +254,9 @@ text-align: left;
   .navbar {
     background-color: #1F2022;
     border: none;
+  }
+
+  .link {
+    color: #fff;
   }
 }

@@ -12,9 +12,10 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <h1>Crypto Tracker</h1>
-      <Link to='/' >Home</Link>
-      <Link to='/about'>About</Link>
-      <Link to='/contact'>Contact</Link>
+      <Link to='/' className="link">Home</Link>
+      <Link to='/charts' className="link">Charts</Link>
+      <Link to='/about' className="link">About</Link>
+      <Link to='/contact' className="link">Contact</Link>
       <div className="dark-mode__toggle">
         <div
           onClick={toggleMode}
