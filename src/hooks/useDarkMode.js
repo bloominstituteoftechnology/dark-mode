@@ -1,8 +1,8 @@
 import {useLocalStorage} from "../hooks/useLocalStorage";
 import React, {useEffect} from "react";
 
-export const useDarkMode = (key) => {
-    const [darkKey, setDarkKey] = useLocalStorage(key)
+export const useDarkMode = () => {
+    const [darkKey, setDarkKey] = useLocalStorage("darkmodeKey", false)
 
     useEffect(() => {
         if (darkKey === true) {
