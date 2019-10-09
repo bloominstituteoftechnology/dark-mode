@@ -16,7 +16,6 @@ export  function useDarkMode() {
         };
     }, [darkMode, useLocalStorage])
 
-    return 
-
+    return [ darkMode, setDarkMode]        
 }
 
