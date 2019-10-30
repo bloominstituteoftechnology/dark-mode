@@ -169,7 +169,7 @@ img {
 
 .navbar {
   align-items: center;
-  border-bottom: 1px solid rgb(221, 221, 221);
+  border-bottom: 1px solid rgb(221, 139, 31);
   display: flex;
   height: 70px;
   justify-content: space-between;
@@ -243,11 +243,12 @@ text-align: left;
 }
 
 .dark-mode {
-  color: #fff;
+  color: rgb(233, 118, 10);
   background-color: #313843;
 
   .navbar {
     background-color: #1F2022;
     border: none;
+    
   }
 }
