@@ -36,8 +36,8 @@ Follow these steps for completing your project.
 ## Minimum Viable Product
 
 - [X] Build a custom hook that let's you save data to localStorage
-- [ ] Build a second custom hook that sets the `dark-mode` class on the body element
-- [ ] Compose your two new hooks together to be able to set and persist your user's dark mode preference in your app
+- [X] Build a second custom hook that sets the `dark-mode` class on the body element
+- [X] Compose your two new hooks together to be able to set and persist your user's dark mode preference in your app
 <!--
 - [ ] Write tests that use mocks and spies to handle dependencies in your components
 -->
