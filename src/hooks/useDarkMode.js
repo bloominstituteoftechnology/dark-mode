@@ -4,8 +4,8 @@ import { brotliDecompressSync } from 'zlib';
 
 
 
-export const useDarkMode = (initialValue) => {
-  const [isDark, setIsDark] = useLocalStorage(initialValue)
+export const useDarkMode = (key,initialValue) => {
+  const [isDark, setIsDark] = useLocalStorage(key, initialValue)
   console.log(isDark);
 
   const onChange = newValue => {
@@ -19,6 +19,6 @@ export const useDarkMode = (initialValue) => {
   }, [isDark])
 
 
-  return [isDark, setIsDark, ]
+  return [isDark, setIsDark, onChange]
 }
     
