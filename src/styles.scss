@@ -252,3 +252,29 @@ text-align: left;
     
   }
 }
+
+button {
+  height: 30px;
+  width: 69px;
+  border-radius: 20px;
+  background: papayawhip;
+  border: 1px solid black;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px dashed whitesmoke;
+  width: 30vw;
+  height: 30vh;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.card-align {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}

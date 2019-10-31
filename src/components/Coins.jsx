@@ -1,39 +1,51 @@
-import React, { useEffect, useState} from 'react';
+import React from 'react';
 import axios from "axios";
+import CoinsCard from './CoinsCard';
 
-const Coins = () => {
 
-const [coins, setCoins] = useState([]);
+class Coins extends React.Component {
+ 
+  constructor (){
+    super ();
+    this.state = {
+      coins: []
+    }
+  }
 
-useEffect(() => {
+  componentDidMount = () => {
     axios
-        .get('https://api.coingecko.com/api/v3/coins/list')
-        .then(response => {
-        setCoins(response.data);
-        console.log("data",response)
-        })
-        .catch(error => {
-        console.error('Server Error', error);
-    });
-}, []);
+    .get(`https://api.coingecko.com/api/v3/coins/list`)
+    .then (res => {
+      console.log( "data", res.data);
+      this.setState({
+        coins: res.data
+      });
+    })
 
+    .catch (error => console.log (error));
+    
+  }
 
-return (
-    <div>
-      {/* {setCoins.map(coin => (
-        <div className="chart__container" key={coin.id}>
-          <h2 className="coin__title">{coin.name}</h2>
-          <h4 className="coin__symbol">{coin.symbol}</h4>
-          <div className="coin__logo">
-            <img src={coin.image} height="40" alt={coin.name} />
-          </div>
-        </div>
-      ))} */}
-    </div>
-);
+    render (){
+    return (
+    
 
+      <div className="card-align">
+
+          {this.state.coins.map (coin => (
+            <CoinsCard
+                key={coin.id}
+                name={coin.name}
+                img={coin.symbol} 
+              />
+          ))}
+      </div>
+  );
+    
 }
+}
+  
+  export default Coins;
 
 
 
-export default Coins;
