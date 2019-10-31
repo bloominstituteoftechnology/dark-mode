@@ -1,16 +1,11 @@
 import { useLocalStorage } from './useLocalStorage'
 import React, { useEffect } from 'react'
-import { brotliDecompressSync } from 'zlib';
 
 
 
-export const useDarkMode = (key,initialValue) => {
-  const [isDark, setIsDark] = useLocalStorage(key, initialValue)
+export const useDarkMode = () => {
+  const [isDark, setIsDark] = useLocalStorage('isDark', false)
   console.log(isDark);
-
-  const onChange = newValue => {
-    setIsDark(newValue)
-  }
 
   useEffect(() => {
     console.log('effected')
@@ -18,7 +13,6 @@ export const useDarkMode = (key,initialValue) => {
     return isDark ? body.classList.add('dark-mode') : body.classList.remove('dark-mode')
   }, [isDark])
 
-
-  return [isDark, setIsDark, onChange]
+  return [isDark, setIsDark]
 }
-    
+  
