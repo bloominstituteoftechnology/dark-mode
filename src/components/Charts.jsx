@@ -1,11 +1,13 @@
 import React from "react";
 import Chart from "./Chart";
+import { isPropertySignature } from "typescript";
 
-const Charts = ({ coinData }) => {
+const Charts = (props) => {
+  const {coinData} = props;
   return (
     <div className="charts">
       {coinData.map(coin => (
-        <div className="chart__container" key={coin.name}>
+        <div className="chart__container" key={coin.name} onClick={() => props.history.push(`/${coin.id}`)}>
           <h2 className="coin__title">{coin.name}</h2>
           <h4 className="coin__symbol">{coin.symbol}</h4>
           <div className="coin__logo">
