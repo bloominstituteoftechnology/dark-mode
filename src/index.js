@@ -26,7 +26,7 @@ const App = () => {
     <div className="App">
       <Route path="/" component={Navbar} />
       <Route exact path="/" render={props => <Charts {...props} coinData={coinData} />}/>
-      <Route path="/:id" render={props => <CoinCard id={props.match.params.id} />} />
+      <Route path="/:id" render={props => <CoinCard {...props} id={props.match.params.id} coinData={coinData} />} />
     </div>
   );
 };
