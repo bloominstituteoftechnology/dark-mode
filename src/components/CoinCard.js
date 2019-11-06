@@ -27,7 +27,7 @@ export default function CoinCard(props) {
         return <div className="loading">Loading coin information...</div>;
       }
 
-    const { name, symbol, image, market_cap_rank, sparkline_in_7d } = coin;
+    const { name, symbol, image, market_cap_rank, description, block_time_in_minutes, sparkline_in_7d } = coin;
 
     return (
         
@@ -40,6 +40,8 @@ export default function CoinCard(props) {
              <img className="thumb" src={image.thumb} height="4" alt={name} />
            </div>
             <h4>Coin Market Cap Overall Rank: {market_cap_rank}</h4>
+            <h4>Block time in minutes: {block_time_in_minutes}</h4>
+            <h5>{`${description.en}`}</h5>
         {/* //   <Chart sparklineData={sparkline_in_7d.price} /> */}
          </div>
         // <div>test</div>
