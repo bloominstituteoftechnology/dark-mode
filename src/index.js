@@ -9,6 +9,7 @@ import "./styles.scss";
 
 const App = () => {
   const [coinData, setCoinData] = useState([]);
+  const [theme, setTheme] = useState({});
 
   useEffect(() => {
     axios
