@@ -24,7 +24,7 @@ const App = () => {
       .catch(err => console.log(err));
   }, []);
   return (
-    <div className="App">
+    <div className={darkMode ? "dark-mode" : "App"}>
       <Navbar />
       <button onClick = {() => {setDarkMode(!darkMode)}}>BUTTON</button>
       <Charts coinData={coinData} />
