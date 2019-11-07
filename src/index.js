@@ -11,7 +11,9 @@ import "./styles.scss";
 const App = () => {
   const [coinData, setCoinData] = useState([]);
 
-  useLocalStorage();
+  const [darkMode, setDarkMode] = useLocalStorage('dark-mode', false);
+  
+  console.log('this is myDestructured DarkMode', darkMode)
   
   useEffect(() => {
     axios
@@ -24,6 +26,7 @@ const App = () => {
   return (
     <div className="App">
       <Navbar />
+      <button onClick = {() => {setDarkMode(!darkMode)}}>BUTTON</button>
       <Charts coinData={coinData} />
     </div>
   );
