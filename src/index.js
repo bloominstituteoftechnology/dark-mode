@@ -22,6 +22,7 @@ const App = () => {
     <div className="App">
       <Navbar />
       <Charts coinData={coinData} />
+      {console.log(coinData,'coinData!!')}
     </div>
   );
 };
