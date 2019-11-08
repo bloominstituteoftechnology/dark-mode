@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import useLocalStorage from './useLocalStorage.jsx'
 
 const Navbar = props => {
-  console.log("these are my props:", props)
+  // console.log("these are my props:", props)
   const toggleMode = e => {
     e.preventDefault();
     props.setDarkMode(!props.darkMode);

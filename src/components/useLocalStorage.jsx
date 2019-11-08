@@ -5,10 +5,10 @@ import React, { useState } from 'react';
 
 const useLocalStorage = (key, initialValue) => {
     const [darkMode, setDarkMode] = useState(() => {
-        console.log("this is localStorage: ", localStorage.getItem('dark-mode'))
+        // console.log("this is localStorage: ", localStorage.getItem('dark-mode'))
         const boolFromLocal = localStorage.getItem(key)
-        console.log("this is the key:", key)
-        console.log(boolFromLocal)
+        // console.log("this is the key:", key)
+        // console.log(boolFromLocal)
         
         return boolFromLocal ? JSON.parse(boolFromLocal) : initialValue
     })
