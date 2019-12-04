@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+import { Route } from "react-router-dom";
 import axios from "axios";
 
 import Charts from "./components/Charts";
 import Navbar from "./components/Navbar";
+import CoinCard from "./components/CoinCard";
 
 import "./styles.scss";
 
@@ -18,13 +21,15 @@ const App = () => {
       .then(res => setCoinData(res.data))
       .catch(err => console.log(err));
   }, []);
+  console.log("index.js, coinData: ", coinData);
   return (
     <div className="App">
-      <Navbar />
-      <Charts coinData={coinData} />
+      <Route path="/" component={Navbar} />
+      <Route exact path="/" render={props => <Charts {...props} coinData={coinData} />}/>
+      <Route path="/:id" render={props => <CoinCard {...props} id={props.match.params.id} coinData={coinData} />} />
     </div>
   );
 };
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(<Router><App /></Router>, rootElement);
