@@ -1,5 +1,5 @@
 import React from "react";
-import moment from "moment";
+import moment from "../../node_modules/moment";
 import {
   LineChart,
   Line,
@@ -7,7 +7,7 @@ import {
   XAxis,
   YAxis,
   Tooltip
-} from "recharts";
+} from "../../node_modules/recharts";
 
 const Chart = ({ sparklineData }) => {
   const formattedData = sparklineData
