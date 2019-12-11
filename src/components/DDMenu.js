@@ -1,17 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { UncontrolledDropdown, DropdownMenu, DropdownToggle, DropdownItem } from 'reactstrap';
 import { Link } from 'react-dom';
 import axios from 'axios';
 
 
-class DDMenu extends React.Component  {
-   constructor() {
-      super(); 
-        this.state= {
-         // isOpened: [],
-         coins: {}
-      };
-   }   
+function DDMenu() {
+   const [coins, setCoins] = useState([]);
 
 
       // toggle = (dropdownIndex) => {
@@ -19,20 +13,22 @@ class DDMenu extends React.Component  {
       //    this.setState({ isOpened: this.state.isOpened })
       // };
 
+      useEffect(() => {
+         setCoins([])
+      }, [coins]);
 
-fetchCoins = (coins) => {
+const fetchCoins = () => {
     axios
       .get(
         `https://api.coingecko.com/api/v3/${coins}/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=true`
       )
       .then(res => {
-         this.state.coins(res.data);
+         setCoins(res.data);
       })   
       .catch(err => console.log(err));
   };
 
 
-render() {
    return (
      <div className='dropdown-menu'>
        {coins.map((coin) => 
@@ -42,7 +38,7 @@ render() {
                   {coin.options.map((option) => 
                      <DropdownItem key={option}>
                         <Link to={`/${coin.name}`}>
-                        {option.name}
+                         {option.name}
                         </Link>
                      </DropdownItem>
                    )}                
@@ -51,6 +47,6 @@ render() {
        </div>
      );
   };
-};
+
 
 export default DDMenu;

@@ -4,7 +4,7 @@ import axios from "axios";
 
 import Charts from "./components/Charts";
 import Navbar from "./components/Navbar";
-// import DDMenu from './components/DDMenu';
+import DDMenu from './components/DDMenu';
 
 import "./styles.scss";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -28,7 +28,7 @@ const App = () => {
     <div className="App">
       <Navbar />
       <Charts coinData={coinData} />
-      {/* <DDMenu coins={this.state.coins}/> */}
+      <DDMenu />
     </div>
   );
 };
