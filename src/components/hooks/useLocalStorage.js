@@ -1,13 +1,13 @@
 import { useState } from 'react';
 
-// export function useInput(initialValue) {
-//   const [value, setValue] = useState(initialValue);
+export function useInput(initialValue) {
+  const [value, setValue] = useState(initialValue);
 
-//   const handleChanges = (newValue) => {
-//     setValue(newValue);
-//   };
-//     return [value, setValue, handleChanges];
-// };
+  const handleChanges = (newValue) => {
+    setValue(newValue);
+  };
+    return [value, setValue, handleChanges];
+};
 
 export default function  useLocalStorage (key, initialValue) {
     const [storedValue, setStoredValue] = useState(() => {

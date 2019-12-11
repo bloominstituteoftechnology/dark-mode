@@ -4,11 +4,14 @@ import axios from "axios";
 
 import Charts from "./components/Charts";
 import Navbar from "./components/Navbar";
+// import DDMenu from './components/DDMenu';
 
 import "./styles.scss";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   const [coinData, setCoinData] = useState([]);
+       
 
   useEffect(() => {
     axios
@@ -18,10 +21,14 @@ const App = () => {
       .then(res => setCoinData(res.data))
       .catch(err => console.log(err));
   }, []);
+
+ 
+
   return (
     <div className="App">
       <Navbar />
       <Charts coinData={coinData} />
+      {/* <DDMenu coins={this.state.coins}/> */}
     </div>
   );
 };
