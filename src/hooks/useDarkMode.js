@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react';
 import useLocalStorage from './useLocalStorage';
 
-export const useDarkMode = () => {
-    const [someValue, setSomeValue] = useLocalStorage(key);
+export default function useDarkMode(key, value) {
+  const [grabbedValue, setGrabbedValue] = useLocalStorage(key, value)
 
-    useEffect(() => {
+  const handleChange = updatedValue => {
+    setGrabbedValue(updatedValue);
+  };
 
-    })
+  return [grabbedValue, handleChange];
 }
