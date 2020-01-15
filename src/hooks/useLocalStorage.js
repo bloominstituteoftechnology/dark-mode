@@ -11,6 +11,7 @@ const useLocalStorage = (key, initialValue) => {
     window.localStorage.setItem(key, JSON.stringify(newStoredVal))
   }
 
+  console.log(`this is uLS:`, storedValue)
   return [storedValue, setNewStoredVal];
 
 };
