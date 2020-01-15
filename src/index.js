@@ -21,6 +21,7 @@ const App = () => {
   return (
     <div className="App">
       <Navbar />
+      
       <Charts coinData={coinData} />
     </div>
   );
@@ -28,3 +29,5 @@ const App = () => {
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(<App />, rootElement);
+
+
