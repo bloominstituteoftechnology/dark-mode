@@ -6,9 +6,23 @@ import Charts from "./components/Charts";
 import Navbar from "./components/Navbar";
 
 import "./styles.scss";
+import { useDarkMode } from "./hooks/useDarkMode";
 
 const App = () => {
   const [coinData, setCoinData] = useState([]);
+  let noticeDarkModeChange = (newValue) => {
+    setDarkMode(newValue);
+    console.log('setting new darkmode as ' + newValue);
+  }
+  const [darkMode, setDarkMode] = useDarkMode(noticeDarkModeChange);
+
+  //   useEffect(() => {
+  //     if(darkMode === 'dark'){
+  //         document.body.classList.add('dark-mode')
+  //     }else {
+  //         document.body.classList.remove('dark-mode')            
+  //     }
+  //   }, [darkMode]);
 
   useEffect(() => {
     axios
@@ -19,7 +33,7 @@ const App = () => {
       .catch(err => console.log(err));
   }, []);
   return (
-    <div className="App">
+    <div className={darkMode === 'dark' ? 'App dark-mode' : 'App'} >
       <Navbar />
       <Charts coinData={coinData} />
     </div>
@@ -28,3 +42,5 @@ const App = () => {
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(<App />, rootElement);
+
+
