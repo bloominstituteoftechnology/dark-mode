@@ -4,12 +4,13 @@ import axios from "axios";
 
 import Charts from "./components/Charts";
 import Navbar from "./components/Navbar";
+import DropDown from './components/DropDown';
 
 import "./styles.scss";
 
 const App = () => {
   const [coinData, setCoinData] = useState([]);
-  
+  const dropItems = [...coinData]
 
   useEffect(() => {
     
@@ -24,6 +25,7 @@ const App = () => {
   return (
     <div className="App">
       <Navbar />
+      <DropDown dropItems={dropItems}/>
       <Charts coinData={coinData} />
     </div>
   );
