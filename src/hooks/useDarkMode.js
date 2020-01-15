@@ -1,5 +1,5 @@
 import { useLocalStorage } from './useLocalStorage';
-import {useEffect} from 'react';
+import { useEffect } from 'react';
 
 export function useDarkMode() {
   const body = document.querySelector(`body`);

@@ -2,6 +2,7 @@ import React from "react";
 import Chart from "./Chart";
 
 const Charts = ({ coinData }) => {
+
   return (
     <div className="charts">
       {coinData.map(coin => (
