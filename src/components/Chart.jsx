@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import moment from "moment";
 import {
   LineChart,
@@ -26,14 +27,26 @@ const Chart = ({ sparklineData }) => {
     })
     .filter(data => data);
 
+  const [dropdownOpen, setOpen] = useState(false);
+  const toggle = () => setOpen(!dropdownOpen);
+
   return (
-    <LineChart width={1100} height={300} data={formattedData}>
-      <Line type="monotone" dataKey="value" stroke="#8884d8" />
-      <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-      <XAxis dataKey="date" interval={3} />
-      <YAxis />
-      <Tooltip />
-    </LineChart>
+    <ButtonDropdown isOpen={dropdownOpen} toggle={toggle}>
+      <DropdownToggle caret>
+        Button Dropdown
+      </DropdownToggle>
+      <DropdownMenu>
+        <DropdownItem>
+          <LineChart width={1100} height={300} data={formattedData}>
+            <Line type="monotone" dataKey="value" stroke="#8884d8" />
+            <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
+            <XAxis dataKey="date" interval={3} />
+            <YAxis />
+            <Tooltip />
+          </LineChart>
+        </DropdownItem>
+      </DropdownMenu>
+    </ButtonDropdown>
   );
 };
 

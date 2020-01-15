@@ -251,3 +251,20 @@ text-align: left;
     border: none;
   }
 }
+
+.link {
+  text-decoration: none;
+  font-size: 2rem;
+  margin-right: 12rem;
+
+  &:active,
+  &:visited {
+    color: black
+  }
+
+  &:hover {
+    color: green;
+    transition: 0.3s ease-in;
+    transform: translateY(-0.3rem)
+  }
+}
