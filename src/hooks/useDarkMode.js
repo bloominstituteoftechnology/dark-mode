@@ -13,7 +13,7 @@ export function useDarkMode() {
     } else {
       return body.classList.remove(`dark-mode`)
     }
-  }, [value]);
+  }, [setValue]);
 
   return [value, setValue];
 }
