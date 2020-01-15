@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import moment from "moment";
 import {
   LineChart,
@@ -27,16 +27,16 @@ const Chart = ({ sparklineData }) => {
     })
     .filter(data => data);
 
-  // const [dropdownOpen, setOpen] = useState(false);
-  // const toggle = () => setOpen(!dropdownOpen);
+  const [dropdownOpen, setOpen] = useState(false);
+  const toggle = () => setOpen(!dropdownOpen);
 
   return (
-    // <ButtonDropdown isOpen={dropdownOpen} toggle={toggle}>
-    //   <DropdownToggle caret>
-    //     Button Dropdown
-    //   </DropdownToggle>
-    //   <DropdownMenu>
-    //     <DropdownItem>
+    <ButtonDropdown isOpen={dropdownOpen} toggle={toggle}>
+      <DropdownToggle caret>
+        Button Dropdown
+      </DropdownToggle>
+      <DropdownMenu>
+        <DropdownItem>
           <LineChart width={1100} height={300} data={formattedData}>
             <Line type="monotone" dataKey="value" stroke="#8884d8" />
             <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
@@ -44,9 +44,9 @@ const Chart = ({ sparklineData }) => {
             <YAxis />
             <Tooltip />
           </LineChart>
-    //     </DropdownItem>
-    //   </DropdownMenu>
-    // </ButtonDropdown>
+        </DropdownItem>
+      </DropdownMenu>
+    </ButtonDropdown>
   );
 };
 

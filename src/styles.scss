@@ -264,6 +264,7 @@ text-align: left;
 
   &:hover {
     color: green;
-    transition: .3s;
+    transition: 0.3s ease-in;
+    transform: translateY(-0.3rem)
   }
 }
