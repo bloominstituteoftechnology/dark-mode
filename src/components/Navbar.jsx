@@ -1,15 +1,14 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useDarkMode } from "../hooks/useDarkMode";
 
 const Navbar = () => {
 
-  const [darkMode, setDarkMode] = useDarkMode(false);
+  const [darkMode, setDarkMode] = useDarkMode();
 
   const toggleMode = e => {
     e.preventDefault();
-    setDarkMode(!darkMode);
-    document.querySelector(".navbar, body").classList.toggle("dark-mode")
-    
+    setDarkMode(!darkMode);   
+
     console.log(`toggled dark mode`)
   };
 
