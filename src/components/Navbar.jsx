@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import useLocalStorge from "../hooks/useLocalStorage";
 
 const Navbar = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useLocalStorge(false);
   const toggleMode = e => {
     e.preventDefault();
     setDarkMode(!darkMode);
