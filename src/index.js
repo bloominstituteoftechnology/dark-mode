@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import axios from "axios";
+import * as serviceWorker from './serviceWorker';
 
 import Charts from "./components/Charts";
 import Navbar from "./components/Navbar";
-import Chart from "./components/Chart";
+import Coin from "./components/Coin";
 
 import "./styles.scss";
 
@@ -26,9 +27,10 @@ const App = () => {
 
   return (
     <div className="App">
-      <Route exact path="/" render ={ (props) => {return (<Navbar {...props} coinData={coinData} />)}}/>
-      <Route exact path="/" render ={(props) => {return (<Charts {...props} coinData={coinData} />)}}/>
-      <Route  path ="/coins/:id" component= {Chart}/>
+      <Route  path="/" render ={ (props) =>  (<Navbar {...props} coinData={coinData} />)}/>
+      <Route path="/coins/" render ={(props) => (<Charts {...props} coinData={coinData} />)}/>
+      <Route  path ="/coins/:id"  render ={(props) => (<Coin {...props} />)}/>
+      {/* <Route  path ="/coins/:id" component= {Chart}/> */}
     </div>
   );
 };
@@ -40,3 +42,4 @@ ReactDOM.render(
   </Router>, 
   rootElement
   );
+  serviceWorker.unregister();

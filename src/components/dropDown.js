@@ -3,7 +3,7 @@ import {UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem} from '
 import { Link } from "react-router-dom";
 
 export const DropDown = ({ coinData }) => {
-    console.log(coinData)
+  console.log("DropDown coinData props", coinData)
 return (
     <div>
          <UncontrolledDropdown nav inNavbar>
@@ -12,9 +12,9 @@ return (
               </DropdownToggle>
               <DropdownMenu right>
                 {coinData.map(item =>(
-                    <Link to ={`online-coin/${item.id}`} >
-                        <DropdownItem  key={item.id}>
-                            <div>  
+                    <Link to ={`/${item.id}`} >
+                        <DropdownItem >
+                            <div key={item.id}>  
                                 {item.name}
                                 </div>
                         </DropdownItem>
