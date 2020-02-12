@@ -4,19 +4,17 @@ import { useLocalStorage } from './useLocalStorage';
 
 export const useDarkMode =(key, initialValue) => {
 
-    const[values, setValues] = useLocalstorage(key, initialValue);
+    const[value, setValue] = useLocalstorage(key, initialValue);
 
-    const clearForm = e => {
-        e.preventDefault();
-        setValues(initialValue);
-    };
+    useEffect(() => {
+        if (value===true) {
+            document.body.classList.add("dark-mode");
+        }
+        else{
+            document.body.classList.remove("dark-mode");
+        }
+    },[value]);
 
-    const handleChanges = e => {
-        setValues({
-            ...values, 
-            [e.target.name]: e.target.value
-        });
-    };
 
-    return [values, clearForm, handleChanges];
+    return [value, clearForm, handleChanges];
 };
