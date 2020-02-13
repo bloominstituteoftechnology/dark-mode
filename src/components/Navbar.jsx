@@ -10,7 +10,7 @@ const toggleMode = e => {
   
   return (
     <nav className="navbar">
-      <h1>Crypto Tracker</h1>
+      <h1>FibKing Trading Crypto Tracker</h1>
       <div className="dark-mode__toggle">
         <div
           onClick={toggleMode}
