@@ -137,7 +137,7 @@ table {
 html {
   font-size: 62.5%;
   font-family: 'Open Sans', sans-serif;
-  font-weight: 500;
+  font-weight: 800;
 }
 
 h1 {
@@ -175,15 +175,15 @@ img {
   justify-content: space-between;
   padding: 0 3%;
   width: 100%;
-  -webkit-box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
-  -moz-box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
-  box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
+  -webkit-box-shadow: 0px 2px 15px -8px #633303;
+  -moz-box-shadow: 0px 2px 15px -8px #633303;
+  box-shadow: 0px 2px 15px -8px #633303;
 }
 
 .dark-mode__toggle {
   background: papayawhip;
   border-radius: 50px;
-  border: 1px solid black;
+  border: 2px solid #572301;
   height: 20px;
   position: relative;
   width: 40px;
@@ -236,6 +236,7 @@ text-align: left;
 .coin__symbol {
   display: block;
   margin-bottom: 10px;
+ 
 }
 
 .coin__logo {
@@ -243,10 +244,11 @@ text-align: left;
 }
 
 .dark-mode {
-  color: #fff;
+  color: #e4fdc7;
   background-color: #313843;
 
   .navbar {
+    color: #f68819;
     background-color: #1F2022;
     border: none;
   }
