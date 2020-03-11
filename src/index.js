@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import ReactDOM from "react-dom";
 import axios from "axios";
 import CoinsList from './components/CoinsList';
-
+import CoinIndex from './components/CoinIndex';
 import Charts from "./components/Charts";
 import Navbar from "./components/Navbar";
 
@@ -28,6 +28,9 @@ const App = () => {
       </Route>
       <Route path='/coinlist'>
         <CoinsList />
+      </Route>
+      <Route path='/coinindexes'>
+        <CoinIndex />
       </Route>
     </div>
   );
