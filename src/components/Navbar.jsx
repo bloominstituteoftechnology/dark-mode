@@ -12,6 +12,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <h1>Crypto Tracker</h1>
+      <Link to='/'>Home</Link>
       <Link to='/coinlist'>BitCoins</Link>
       <Link to='/coinindexes'>BitCoin Indexes</Link>
       <div className="dark-mode__toggle">
