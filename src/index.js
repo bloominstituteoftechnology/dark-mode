@@ -19,7 +19,7 @@ const App = () => {
       .catch(err => console.log(err));
   }, []);
   return (
-    <div className="App">
+    <div id="body" className="App">
       <Navbar />
       <Charts coinData={coinData} />
     </div>
