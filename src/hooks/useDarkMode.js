@@ -1,13 +1,16 @@
 import React, { useEffect } from "react";
 import useLocalStorage from "./useLocalStorage";
 
-function useDarkMode() {
-  const [toggleOnorOff, setOnorOff] = useLocalStorage("key", false);
+function useDarkMode(key, initialValue) {
+  const [storedValue, setStoredValue] = useLocalStorage(key, initialValue);
+  const onChange = (newValue) => {
+    setStoredValue(newValue)
+  }
   useEffect(() => {
-    toggleOnorOff
-      ? document.body.classList.add("dark-mode")
-      : document.body.classList.remove("dark-mode");
-  }, [setOnorOff]);
-  return ["storedValue", "setStoredValue"];
+    return storedValue
+      ? window.document.body.classList.add("dark-mode")
+      : window.document.body.classList.remove("dark-mode");
+  }, [storedValue]);
+  return [storedValue, setStoredValue, onChange];
 }
 export default useDarkMode;
