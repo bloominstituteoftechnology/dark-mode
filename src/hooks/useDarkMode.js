@@ -1,14 +1,15 @@
 import { useLocalStorage } from './useLocalStorage';
 import { useEffect } from 'react';
 
-export function useDarkMode() {
+export function useDarkMode(key) {
 
-    const [view, setView] = useLocalStorage('View colour scheme enabled')
+    const [view, setView] = useLocalStorage(key)
 
     useEffect(() => {
-        let body = document.getElementById('body');
-        view : body.className += 'dark-mode' ? body.classList.remove('darkmode')
+        const body = document.querySelector('body');
+        view ? body.classList.add('dark-mode') : body.classList.remove('dark-mode')
     }, [view])
 
     return [view, setView];
+
 } //function end bracker
