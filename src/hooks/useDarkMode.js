@@ -10,10 +10,11 @@ const useDarkMode = () => {
             document.body.classList.add('dark-mode')
         } else {
             console.log('Dark Mode Off')
-            document.body.classList.remove('dark.mode')
+            document.body.classList.remove('dark-mode')
         }
-        // document.title = `Count is: ${count}`;
     }, [darkModeOn])
+
+    return [darkModeOn, setDarkModeOn];
 }
 
 export default useDarkMode;
