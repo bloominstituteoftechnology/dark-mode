@@ -6,9 +6,12 @@ const useDarkMode = () => {
 
     useEffect(() => {
         if (darkModeOn === true) {
-            console.log('Dark Mode On')
-        } else
-            {console.log('Dark Mode Off')}
+            console.log('Dark Mode On');
+            document.body.classList.add('dark-mode')
+        } else {
+            console.log('Dark Mode Off')
+            document.body.classList.remove('dark.mode')
+        }
         // document.title = `Count is: ${count}`;
     }, [darkModeOn])
 }
