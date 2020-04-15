@@ -6,7 +6,7 @@ const useDarkMode = () => {
 
     useEffect(() => {
         const body = window.document.body
-        useLocalStorage ? body.classList.add('dark-mode') : body.classList.remove('dark-mode')
+        value ? body.classList.add('dark-mode') : body.classList.remove('dark-mode')
     }, [value])
 
     return [value, setValue]
