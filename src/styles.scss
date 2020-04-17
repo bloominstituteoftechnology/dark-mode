@@ -84,13 +84,14 @@ time,
 mark,
 audio,
 video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
+  margin        : 0;
+  padding       : 0;
+  border        : 0;
+  font-size     : 100%;
+  font          : inherit;
   vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -105,17 +106,21 @@ nav,
 section {
   display: block;
 }
+
 body {
   line-height: 1;
 }
+
 ol,
 ul {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
+
 blockquote:before,
 blockquote:after,
 q:before,
@@ -123,9 +128,10 @@ q:after {
   content: '';
   content: none;
 }
+
 table {
   border-collapse: collapse;
-  border-spacing: 0;
+  border-spacing : 0;
 }
 
 /* General Styles */
@@ -135,7 +141,7 @@ table {
 }
 
 html {
-  font-size: 62.5%;
+  font-size  : 62.5%;
   font-family: 'Open Sans', sans-serif;
   font-weight: 500;
 }
@@ -154,7 +160,7 @@ h4 {
 
 img {
   height: auto;
-  width: 100%;
+  width : 100%;
 }
 
 .flex-spacer {
@@ -163,40 +169,54 @@ img {
 
 .App {
   font-family: sans-serif;
-  text-align: center;
-  width: 100%;
+  text-align : center;
+  width      : 100%;
 }
 
 .navbar {
-  align-items: center;
-  border-bottom: 1px solid rgb(221, 221, 221);
-  display: flex;
-  height: 70px;
-  justify-content: space-between;
-  padding: 0 3%;
-  width: 100%;
+  border-bottom     : 1px solid rgb(221, 221, 221);
+  display           : flex;
+  height            : 70px;
+  padding           : 0 3%;
+  width             : 100%;
   -webkit-box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
-  -moz-box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
-  box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
+  -moz-box-shadow   : 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
+  box-shadow        : 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
+
+  .nav-left {
+    width  : 100%;
+    display: flex;
+    margin : auto;
+
+    .navLink {
+      font-size      : 1.5rem;
+      line-height    : 2.5rem;
+      margin-left    : 2rem;
+      color          : #f68819;
+      text-decoration: none;
+
+    }
+  }
 }
 
 .dark-mode__toggle {
-  background: papayawhip;
+  background   : papayawhip;
   border-radius: 50px;
-  border: 1px solid black;
-  height: 20px;
-  position: relative;
-  width: 40px;
+  border       : 1px solid black;
+  height       : 20px;
+  position     : relative;
+  width        : 40px;
+  margin-top   : 2.5rem;
 }
 
 .toggle {
-  background: #f68819;
+  background   : #f68819;
   border-radius: 50px;
-  height: 18px;
-  left: 0;
-  position: absolute;
-  transition: 0.2s;
-  width: 20px;
+  height       : 18px;
+  left         : 0;
+  position     : absolute;
+  transition   : 0.2s;
+  width        : 20px;
 }
 
 .toggled {
@@ -204,37 +224,37 @@ img {
 }
 
 .charts {
-  width: 80%;
+  width : 80%;
   margin: 0 auto;
 }
 
 .chart__container {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
+  align-items    : center;
+  display        : flex;
+  flex-direction : column;
   justify-content: center;
-  margin: 50px 0 0;
-  width: 100%;
+  margin         : 50px 0 0;
+  width          : 100%;
 }
 
 .chart-header {
-  display: flex;
-  align-items: center;
+  display        : flex;
+  align-items    : center;
   justify-content: space-between;
-  width: 100%;
-  max-width: 900px;
-  margin-bottom: 16px;
+  width          : 100%;
+  max-width      : 900px;
+  margin-bottom  : 16px;
 }
 
 .coin__title {
-  display: block;
+  display    : block;
   margin-left: 8px;
-    min-width: 160px;
-text-align: left;
+  min-width  : 160px;
+  text-align : left;
 }
 
 .coin__symbol {
-  display: block;
+  display      : block;
   margin-bottom: 10px;
 }
 
@@ -242,12 +262,31 @@ text-align: left;
   width: 50px;
 }
 
+.stretchPageCont {
+  padding: 1rem 1rem;
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  .facts {
+    width  : 100%;
+    display: flex;
+    margin : 3rem;
+
+    .fact {
+      width : 30%;
+      margin: 1rem;
+    }
+  }
+}
+
 .dark-mode {
-  color: #fff;
+  color           : #fff;
   background-color: #313843;
 
   .navbar {
     background-color: #1F2022;
-    border: none;
+    border          : none;
   }
 }
