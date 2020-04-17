@@ -187,6 +187,7 @@ img {
   height: 20px;
   position: relative;
   width: 40px;
+  cursor: pointer;
 }
 
 .toggle {
@@ -227,10 +228,7 @@ img {
 }
 
 .coin__title {
-  display: block;
-  margin-left: 8px;
-    min-width: 160px;
-text-align: left;
+  min-width: 160px;
 }
 
 .coin__symbol {
