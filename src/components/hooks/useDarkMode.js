@@ -7,9 +7,9 @@ export function useDarkMode(key) {
 
     useEffect(() => {
        if(darkMode) {
-           window.document.body.className('dark-mode');
+           window.document.body.classList.add('dark-mode');
        } else {
-           window.document.body.className('App');
+           window.document.body.classList.remove('dark-mode');
        }
     },[])
 }
