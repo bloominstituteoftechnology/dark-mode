@@ -1,24 +1,16 @@
 import React from "react";
+import { useLocalStorage } from "./useLocalStorage";
 
-export default function useDarkMode() {
-	const [darkMode, setDarkMode] = React.useState(getInitialMode());
+export function useDarkMode(key, initialValue, cb) {
+	const [darkMode, setDarkMode] = useLocalStorage(key, initialValue);
 
 	//to make the mode persistant and activate only when dark mode is in
 	React.useEffect(() => {
-		localStorage.setItem("dark", JSON.stringify(darkMode));
-	}, [darkMode]);
+		darkMode
+			? document.querySelector("body").classList.add("dark-mode")
+			: document.querySelector("body").classList.remove("dark-mode");
+	});
 
-	//get the dark mode from storage
-	function getInitialMode() {
-		const savedMode = JSON.parse(localStorage.getItem("dark"));
-		return savedMode || false;
+	return [darkMode, setDarkMode];
+
 	}
-
-	return (
-		<div className='dark-mode'>
-			<button onClick={() => setDarkMode((prevMode) => !prevMode)}>
-				Toggle Mode
-			</button>
-		</div>
-	);
-}
