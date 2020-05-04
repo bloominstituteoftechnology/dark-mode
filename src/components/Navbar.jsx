@@ -12,9 +12,8 @@ const Navbar = () => {
     <nav className="navbar">
       <h1>Crypto Tracker</h1>
       <a className="link" href="https://www.coingecko.com/en">Find out more</a>
-      <div className="dark-mode__toggle">
+      <div className="dark-mode__toggle" onClick={toggleMode}>
         <div
-          onClick={toggleMode}
           className={darkMode ? 'toggle toggled' : 'toggle'}
         />
       </div>
