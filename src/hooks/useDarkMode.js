@@ -21,4 +21,4 @@ const useDarkMode = (key, initialValue) => {
 	return [ darkMode, setDarkMode, toggleDarkMode ];
 };
 
-export default useDarkMode
+export default useDarkMode;
