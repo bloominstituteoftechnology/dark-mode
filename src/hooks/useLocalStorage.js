@@ -2,8 +2,9 @@ import {useState} from 'react';
 
 export const useLocalStorage =  (key, initialValue) => {
     console.log("In the useLocalStorage hook");
-    const item = window.localStorage.getitem(key);
+    
     const [storedValue, setStoredValue] = useState((item) => {
+        item = window.localStorage.getItem(key);
         return item ? JSON.parse(item) : initialValue;
     });
     const setValue = value => {
