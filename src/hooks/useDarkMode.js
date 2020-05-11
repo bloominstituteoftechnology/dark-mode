@@ -1,14 +1,20 @@
 import React from 'react';
 
-import useLocalStorage from './useLocalStorage';
+import {useLocalStorage} from './useLocalStorage';
 
 
 
-const useDarkMode = darkMode => {
+export const useDarkMode = darkMode => {
     // useLocalStorage(darkMode)
 
-    const [storedDarkMode, setDarkValue] = useLocalStorage("darkMode",false);
-    
+    const [storedDarkMode, setDarkValue] = useLocalStorage("darkMode",true);
+    console.log("in useDarkMode");
+    if(storedDarkMode) {
+        const theBody = document.getElementById('body')
+        theBody.classList.add('dark-mode');
+    }
+
+
 
     return  [storedDarkMode];
 }

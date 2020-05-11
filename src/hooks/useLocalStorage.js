@@ -1,7 +1,7 @@
 import {useState} from 'react';
 
 export const useLocalStorage =  (key, initialValue) => {
-    // console.log("In the useLocalStorage hook");
+    console.log("In the useLocalStorage hook");
     const item = window.localStorage.getitem(key);
     const [storedValue, setStoredValue] = useState((item) => {
         return item ? JSON.parse(item) : initialValue;
