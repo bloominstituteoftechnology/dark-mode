@@ -6,17 +6,24 @@ import {useLocalStorage} from './useLocalStorage';
 
 export const useDarkMode = darkMode => {
     // useLocalStorage(darkMode)
+    const theBody = document.getElementsByTagName("body");
 
     const [darkModeValue, setDarkMode] = useLocalStorage("darkMode",true);
     console.log("in useDarkMode");
-    const theBody = document.getElementById('body');
-    console.log("The body is ", theBody);
-    if(darkMode) {
-        theBody.classList.add('dark-mode');
+
+    // const setDarkMode = (newValue) => {
+    // setDarkMode = newValue => {
+    //     setValue(newValue); //changes state value
+    //     window.localStorage
+    // }
+    
+    
+    if(darkModeValue) {
+        theBody[0].classList.add('dark-mode');
     }else {
-        theBody.classList.remove('dark-mode');
+        theBody[0].classList.remove('dark-mode');
     }
-    return useDarkMode;
+    return [darkModeValue,setDarkMode];
     // return  [darkModeValue, setDarkMode];
 }
 

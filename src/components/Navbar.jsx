@@ -3,13 +3,15 @@ import {useDarkMode} from '../hooks/useDarkMode';
 
 const Navbar = () => {
   const [darkMode, setDarkMode] = useDarkMode();
+  console.log("Darkmode has value ",darkMode);
+  console.log("Setdarkmode has value ", setDarkMode);
   
   const toggleMode = e => {
     e.preventDefault();
     setDarkMode(!darkMode);
   };
   return (
-    <nav className="navbar body">
+    <nav className="navbar">
       <h1>Crypto Tracker</h1>
       <div className="dark-mode__toggle">
         <div
