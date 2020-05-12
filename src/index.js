@@ -21,12 +21,11 @@ const App = () => {
   }, []);
   return (
     <div className="App">
-      <div id="body">
       <Navbar />
       <h1>Testing my app</h1>
       
       <Charts coinData={coinData} />
-      </div>
+
     </div>
   );
 };
