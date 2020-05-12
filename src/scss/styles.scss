@@ -169,7 +169,7 @@ img {
 
 .navbar {
   align-items: center;
-  border-bottom: 1px solid rgb(221, 221, 221);
+  border-bottom: 1px solid $border-btm;
   display: flex;
   height: 70px;
   justify-content: space-between;
@@ -181,7 +181,7 @@ img {
 }
 
 .dark-mode__toggle {
-  background: papayawhip;
+  background: $bg-color;
   border-radius: 50px;
   border: 1px solid black;
   height: 20px;
@@ -190,7 +190,7 @@ img {
 }
 
 .toggle {
-  background: #f68819;
+  background: $toggle;
   border-radius: 50px;
   height: 18px;
   left: 0;
@@ -243,11 +243,11 @@ text-align: left;
 }
 
 .dark-mode {
-  color: #fff;
-  background-color: #313843;
+  color: $dark-color;
+  background-color: $dark-bg-color;
 
   .navbar {
-    background-color: #1F2022;
+    background-color: $dark-nav-color;
     border: none;
   }
 }
