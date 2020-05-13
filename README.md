@@ -99,7 +99,7 @@ We're going to use this inside our dark mode hook, but this can be used anywhere
 ## STEP 2 - useDarkMode
 
 -[x] Inside the `hooks` directory, add a new file called `useDarkMode`.
--[ ] Build a function called `useDarkMode`.
+-[x] Build a function called `useDarkMode`.
 -[x] Import `useLocalStorage`
 -[x] Call `useLocalStorage` and pass in the key you want to use to store whether or not dark mode is enabled. Remember, this hook returns an array with a value and a setter in an array, exactly like the state hook, so make sure to capture those values in a `const` - `const [someValue, setSomeValue] = useLocalStorage('your key here')`
 -[x] Now to add the class to the body. If we need to manipulate the DOM directly, how do we do that? Any direct DOM manipulation is considered a side effect, right? So let's use the effect hook.
@@ -114,7 +114,7 @@ We're going to use this inside our dark mode hook, but this can be used anywhere
 
 Now that we have composed our different pieces of stateful logic, let's use it in our component!
 
--[ ] import the dark mode hook into the `NavBar` component
+-[x] import the dark mode hook into the `NavBar` component
 -[ ] Looking at this component, we see that we are controlling the toggle with some state. The state hook here returns a `darkMode` value, and a `setDarkMode` function. Isn't that exactly what our `useDarkMode` hook returns as well? Replace the state hook with our hook, click the toggle, and watch the magic happen!!!
 
 (If it wasn't magical, you have a bug somewhere 😫 go back through the steps slowly, one at a time, to see if you missed any of the steps)
