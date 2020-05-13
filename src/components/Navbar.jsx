@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
+import {useDarkMode} from '../hooks/useDarkMode';
 
-const Navbar = () => {
-  const [darkMode, setDarkMode] = useState(false);
+const Navbar = (props) => {
   const toggleMode = e => {
     e.preventDefault();
     setDarkMode(!darkMode);
+    props.setDark(!props.useDark)
   };
+  const [darkMode, setDarkMode] = useDarkMode(toggleMode);
   return (
     <nav className="navbar">
       <h1>Crypto Tracker</h1>
