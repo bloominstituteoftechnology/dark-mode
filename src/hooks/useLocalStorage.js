@@ -11,16 +11,18 @@ function UseLocalStorage (key, initialValue) {
 
         const item = window.localStorage.getItem(key);
 
-        const setValue = value => {
-
-            setStoredValue(value);
-            window.localStorage.setItem(key, JSON.stringify(value));
-
-        };
+       
     
         return item ? JSON.parse(item) : initialValue;
     
     });
+
+    const setValue = value => {
+
+        setStoredValue(value);
+        window.localStorage.setItem(key, JSON.stringify(value));
+
+    };
 
     return [storedValue];
 
