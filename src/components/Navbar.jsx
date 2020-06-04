@@ -4,7 +4,7 @@ import { useDarkMode } from '../Hooks/UseDarkMode';
 const Navbar = () => {
   const [theme, setTheme, toggleMode] = useDarkMode(false)
 
-  
+
   useEffect(() => {
     const darkness = document.querySelector('body')
     
