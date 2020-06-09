@@ -1,5 +1,5 @@
 # Module Project: Composing Stateful Logic - Dark Mode
-
+ 
 This project allows you to practice the concepts and techniques learned in this module and apply them in a concrete project. This module explored Form management in React. You learned what stateful logic is, how to build custom hooks, how to compose multiple hooks together, and how to use mocks and spies in testing. In your project you will demonstrate proficiency of these subjects and principles by creating an application using each of these.
 
 ## Instructions
