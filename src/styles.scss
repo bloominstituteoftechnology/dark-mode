@@ -120,7 +120,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 table {
@@ -136,7 +136,7 @@ table {
 
 html {
   font-size: 62.5%;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 500;
 }
 
@@ -229,8 +229,8 @@ img {
 .coin__title {
   display: block;
   margin-left: 8px;
-    min-width: 160px;
-text-align: left;
+  min-width: 160px;
+  text-align: left;
 }
 
 .coin__symbol {
@@ -247,7 +247,26 @@ text-align: left;
   background-color: #313843;
 
   .navbar {
-    background-color: #1F2022;
+    background-color: #1f2022;
     border: none;
+  }
+}
+
+.links {
+  width: 75%;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  font-size: 1.8rem;
+  margin: 5px;
+  padding: 5px;
+}
+.home {
+  margin-top: 15px;
+  font-size: 2.4rem;
+  p {
+    font-size: 1.8rem;
+    margin: 10px;
   }
 }
