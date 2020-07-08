@@ -6,7 +6,7 @@ export const useDarkMode = (key, initialValue) => {
 
   useEffect(() =>{
     window.document.body.classList.toggle('dark-mode')
-},[darkMode])
+},[setDarkMode])
 
   return [darkMode, setDarkMode]
 }
