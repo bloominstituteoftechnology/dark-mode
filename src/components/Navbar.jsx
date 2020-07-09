@@ -10,9 +10,8 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <h1>Crypto Tracker</h1>
-      <div className="dark-mode__toggle">
+      <div className="dark-mode__toggle" onClick={toggleMode}>
         <div
-          onClick={toggleMode}
           className={darkMode ? 'toggle toggled' : 'toggle'}
         />
       </div>
