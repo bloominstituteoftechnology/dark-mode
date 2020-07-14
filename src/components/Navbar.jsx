@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 const Navbar = () => {
+  //first commit  
   const [darkMode, setDarkMode] = useState(false);
   const toggleMode = e => {
     e.preventDefault();
