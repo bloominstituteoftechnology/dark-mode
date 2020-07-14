@@ -4,9 +4,9 @@ import { useLocalStorage } from './useLocalStorage';
 export const useDarkMode = () => {
     const [someValue, setSomeValue] = useLocalStorage(initialValue);
 
-    // useEffect(() => {
-    //     window.localStorage.value === true ? return( <body className='dark-mode' : ''>)
-    // },[]);
+    //     useEffect(() => {
+    //         window.localStorage.value === true ? return (<body className='dark-mode' : '' >)
+    // }, []);
 
     return [];
 }
