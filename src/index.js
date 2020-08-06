@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import ReactDOM from "react-dom";
 import axios from "axios";
-
+import CoinsList from './components/CoinsList';
+import CoinIndex from './components/CoinIndex';
 import Charts from "./components/Charts";
 import Navbar from "./components/Navbar";
 
@@ -21,10 +23,22 @@ const App = () => {
   return (
     <div className={darkmode ? "dark-mode App" : "App"}>
       <Navbar />
-      <Charts coinData={coinData} />
+      <Route exact path='/'>
+        <Charts coinData={coinData} />
+      </Route>
+      <Route path='/coinlist'>
+        <CoinsList />
+      </Route>
+      <Route path='/coinindexes'>
+        <CoinIndex />
+      </Route>
     </div>
   );
 };
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(
+<Router>
+  <App />
+</Router>
+, rootElement);
