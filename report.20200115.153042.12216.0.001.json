@@ -1,0 +1,390 @@
+
+{
+  "header": {
+    "reportVersion": 1,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20200115.153042.12216.0.001.json",
+    "dumpEventTime": "2020-01-15T15:30:42Z",
+    "dumpEventTimeStamp": "1579120242358",
+    "processId": 12216,
+    "cwd": "D:\\Lambda\\dark-mode",
+    "commandLine": [
+      "C:/Program Files/nodejs/node.exe",
+      "C:/Program Files (x86)/Yarn/bin/yarn.js",
+      "install"
+    ],
+    "nodejsVersion": "v13.6.0",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "win32",
+    "componentVersions": {
+      "node": "13.6.0",
+      "v8": "7.9.317.25-node.26",
+      "uv": "1.34.0",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "79",
+      "nghttp2": "1.40.0",
+      "napi": "5",
+      "llhttp": "2.0.1",
+      "openssl": "1.1.1d",
+      "cldr": "36.0",
+      "icu": "65.1",
+      "tz": "2019c",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "headersUrl": "https://nodejs.org/download/release/v13.6.0/node-v13.6.0-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v13.6.0/node-v13.6.0.tar.gz",
+      "libUrl": "https://nodejs.org/download/release/v13.6.0/win-x64/node.lib"
+    },
+    "osName": "Windows_NT",
+    "osRelease": "10.0.18363",
+    "osVersion": "Windows 10 Home",
+    "osMachine": "x86_64",
+    "cpus": [
+      {
+        "model": "Intel(R) Celeron(R) CPU  N3060  @ 1.60GHz",
+        "speed": 1600,
+        "user": 40121640,
+        "nice": 0,
+        "sys": 22041046,
+        "idle": 44817625,
+        "irq": 1933015
+      },
+      {
+        "model": "Intel(R) Celeron(R) CPU  N3060  @ 1.60GHz",
+        "speed": 1600,
+        "user": 43459859,
+        "nice": 0,
+        "sys": 19914203,
+        "idle": 43605718,
+        "irq": 945937
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "name": "Wi-Fi 2",
+        "internal": false,
+        "mac": "80:2b:f9:9c:8d:d1",
+        "address": "2606:a000:8e8c:d700::1",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Wi-Fi 2",
+        "internal": false,
+        "mac": "80:2b:f9:9c:8d:d1",
+        "address": "2606:a000:8e8c:d700:c063:f630:2933:4fa",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Wi-Fi 2",
+        "internal": false,
+        "mac": "80:2b:f9:9c:8d:d1",
+        "address": "2606:a000:8e8c:d700:219d:2821:2a71:2625",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Wi-Fi 2",
+        "internal": false,
+        "mac": "80:2b:f9:9c:8d:d1",
+        "address": "2606:a000:8e8c:d700:44c9:60de:ada:1edf",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Wi-Fi 2",
+        "internal": false,
+        "mac": "80:2b:f9:9c:8d:d1",
+        "address": "fe80::c063:f630:2933:4fa",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 13
+      },
+      {
+        "name": "Wi-Fi 2",
+        "internal": false,
+        "mac": "80:2b:f9:9c:8d:d1",
+        "address": "192.168.0.9",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "::1",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "127.0.0.1",
+        "netmask": "255.0.0.0",
+        "family": "IPv4"
+      }
+    ],
+    "host": "LAPTOP-3DE5GGM1"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x00007ff751291be9",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+10857"
+    },
+    {
+      "pc": "0x00007ff751295f5c",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+28124"
+    },
+    {
+      "pc": "0x00007ff751294f18",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+23960"
+    },
+    {
+      "pc": "0x00007ff75138f84b",
+      "symbol": "v8::base::CPU::has_sse+39435"
+    },
+    {
+      "pc": "0x00007ff751bb7b7e",
+      "symbol": "v8::Isolate::ReportExternalAllocationLimitReached+94"
+    },
+    {
+      "pc": "0x00007ff751b9f2d1",
+      "symbol": "v8::SharedArrayBuffer::Externalize+785"
+    },
+    {
+      "pc": "0x00007ff751a6655c",
+      "symbol": "v8::internal::Heap::EphemeronKeyWriteBarrierFromCode+1468"
+    },
+    {
+      "pc": "0x00007ff751a6e5bb",
+      "symbol": "v8::internal::Heap::PageFlagsAreConsistent+3739"
+    },
+    {
+      "pc": "0x00007ff751a63aa3",
+      "symbol": "v8::internal::Heap::CollectGarbage+1283"
+    },
+    {
+      "pc": "0x00007ff751a62234",
+      "symbol": "v8::internal::Heap::AllocateExternalBackingStore+1396"
+    },
+    {
+      "pc": "0x00007ff751a84304",
+      "symbol": "v8::internal::Factory::NewFillerObject+196"
+    },
+    {
+      "pc": "0x00007ff7517de5c1",
+      "symbol": "v8::internal::interpreter::JumpTableTargetOffsets::iterator::operator=+1681"
+    },
+    {
+      "pc": "0x00007ff7520010dd",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+517453"
+    },
+    {
+      "pc": "0x000001d45e1bb668",
+      "symbol": ""
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 132911104,
+    "totalCommittedMemory": 132911104,
+    "usedMemory": 128125992,
+    "availableMemory": 2020468632,
+    "memoryLimit": 2148532224,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 262144,
+        "committedMemory": 262144,
+        "capacity": 33040,
+        "used": 33040,
+        "available": 0
+      },
+      "new_space": {
+        "memorySize": 1048576,
+        "committedMemory": 1048576,
+        "capacity": 1047424,
+        "used": 1047168,
+        "available": 256
+      },
+      "old_space": {
+        "memorySize": 105259008,
+        "committedMemory": 105259008,
+        "capacity": 104769896,
+        "used": 102879632,
+        "available": 1890264
+      },
+      "code_space": {
+        "memorySize": 2002944,
+        "committedMemory": 2002944,
+        "capacity": 1894016,
+        "used": 1211392,
+        "available": 682624
+      },
+      "map_space": {
+        "memorySize": 8654848,
+        "committedMemory": 8654848,
+        "capacity": 8644544,
+        "used": 7417600,
+        "available": 1226944
+      },
+      "large_object_space": {
+        "memorySize": 14991360,
+        "committedMemory": 14991360,
+        "capacity": 14945800,
+        "used": 14945800,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 692224,
+        "committedMemory": 692224,
+        "capacity": 591360,
+        "used": 591360,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 1047424,
+        "used": 0,
+        "available": 1047424
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 106.593,
+    "kernelCpuSeconds": 157.39,
+    "cpuConsumptionPercent": 27.0474,
+    "maxRss": 282832896,
+    "pageFaults": {
+      "IORequired": 313770,
+      "IONotRequired": 0
+    },
+    "fsActivity": {
+      "reads": 25630,
+      "writes": 37811
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "ALLUSERSPROFILE": "C:\\ProgramData",
+    "APPDATA": "C:\\Users\\Shelly Seger\\AppData\\Roaming",
+    "COLORTERM": "truecolor",
+    "COMMONPROGRAMFILES": "C:\\Program Files\\Common Files",
+    "CommonProgramFiles(x86)": "C:\\Program Files (x86)\\Common Files",
+    "CommonProgramW6432": "C:\\Program Files\\Common Files",
+    "COMPUTERNAME": "LAPTOP-3DE5GGM1",
+    "COMSPEC": "C:\\WINDOWS\\system32\\cmd.exe",
+    "DriverData": "C:\\Windows\\System32\\Drivers\\DriverData",
+    "EXEPATH": "C:\\Program Files\\Git\\bin",
+    "HOME": "C:\\Users\\Shelly Seger",
+    "HOMEDRIVE": "C:",
+    "HOMEPATH": "\\Users\\Shelly Seger",
+    "LANG": "en_US.UTF-8",
+    "LOCALAPPDATA": "C:\\Users\\Shelly Seger\\AppData\\Local",
+    "LOGONSERVER": "\\\\LAPTOP-3DE5GGM1",
+    "MSYSTEM": "MINGW64",
+    "NUMBER_OF_PROCESSORS": "2",
+    "OneDrive": "C:\\Users\\Shelly Seger\\OneDrive",
+    "OneDriveConsumer": "C:\\Users\\Shelly Seger\\OneDrive",
+    "OnlineServices": "Online Services",
+    "OS": "Windows_NT",
+    "PATH": "C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Users\\Shelly Seger\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0;C:\\WINDOWS\\System32\\OpenSSH;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs;C:\\Program Files (x86)\\Yarn\\bin;C:\\Users\\Shelly Seger\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Shelly Seger\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Shelly Seger\\AppData\\Roaming\\npm;C:\\Users\\Shelly Seger\\AppData\\Local\\Yarn\\bin",
+    "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC",
+    "platformcode": "AN",
+    "PLINK_PROTOCOL": "ssh",
+    "PROCESSOR_ARCHITECTURE": "AMD64",
+    "PROCESSOR_IDENTIFIER": "Intel64 Family 6 Model 76 Stepping 4, GenuineIntel",
+    "PROCESSOR_LEVEL": "6",
+    "PROCESSOR_REVISION": "4c04",
+    "ProgramData": "C:\\ProgramData",
+    "PROGRAMFILES": "C:\\Program Files",
+    "ProgramFiles(x86)": "C:\\Program Files (x86)",
+    "ProgramW6432": "C:\\Program Files",
+    "PSModulePath": "C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules",
+    "PUBLIC": "C:\\Users\\Public",
+    "PWD": "/d/Lambda/dark-mode",
+    "RegionCode": "NA",
+    "SESSIONNAME": "Console",
+    "SHLVL": "2",
+    "SYSTEMDRIVE": "C:",
+    "SYSTEMROOT": "C:\\WINDOWS",
+    "TEMP": "C:\\Users\\SHELLY~1\\AppData\\Local\\Temp",
+    "TERM_PROGRAM": "vscode",
+    "TERM_PROGRAM_VERSION": "1.41.1",
+    "TMP": "C:\\Users\\SHELLY~1\\AppData\\Local\\Temp",
+    "USERDOMAIN": "LAPTOP-3DE5GGM1",
+    "USERDOMAIN_ROAMINGPROFILE": "LAPTOP-3DE5GGM1",
+    "USERNAME": "Shelly Seger",
+    "USERPROFILE": "C:\\Users\\Shelly Seger",
+    "WINDIR": "C:\\WINDOWS",
+    "_": "/usr/bin/winpty"
+  },
+  "sharedObjects": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "C:\\WINDOWS\\SYSTEM32\\ntdll.dll",
+    "C:\\WINDOWS\\System32\\KERNEL32.DLL",
+    "C:\\WINDOWS\\System32\\KERNELBASE.dll",
+    "C:\\WINDOWS\\System32\\WS2_32.dll",
+    "C:\\WINDOWS\\System32\\RPCRT4.dll",
+    "C:\\WINDOWS\\System32\\PSAPI.DLL",
+    "C:\\WINDOWS\\System32\\ADVAPI32.dll",
+    "C:\\WINDOWS\\System32\\msvcrt.dll",
+    "C:\\WINDOWS\\System32\\sechost.dll",
+    "C:\\WINDOWS\\System32\\USER32.dll",
+    "C:\\WINDOWS\\System32\\win32u.dll",
+    "C:\\WINDOWS\\System32\\GDI32.dll",
+    "C:\\WINDOWS\\System32\\gdi32full.dll",
+    "C:\\WINDOWS\\System32\\msvcp_win.dll",
+    "C:\\WINDOWS\\System32\\ucrtbase.dll",
+    "C:\\WINDOWS\\System32\\CRYPT32.dll",
+    "C:\\WINDOWS\\System32\\MSASN1.dll",
+    "C:\\WINDOWS\\System32\\bcrypt.dll",
+    "C:\\WINDOWS\\SYSTEM32\\dbghelp.dll",
+    "C:\\WINDOWS\\SYSTEM32\\IPHLPAPI.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\USERENV.dll",
+    "C:\\WINDOWS\\System32\\profapi.dll",
+    "C:\\WINDOWS\\SYSTEM32\\WINMM.dll",
+    "C:\\WINDOWS\\SYSTEM32\\WINMMBASE.dll",
+    "C:\\WINDOWS\\System32\\cfgmgr32.dll",
+    "C:\\WINDOWS\\System32\\bcryptPrimitives.dll",
+    "C:\\WINDOWS\\System32\\IMM32.DLL",
+    "C:\\WINDOWS\\System32\\powrprof.dll",
+    "C:\\WINDOWS\\System32\\UMPDC.dll",
+    "C:\\WINDOWS\\SYSTEM32\\CRYPTBASE.DLL",
+    "C:\\WINDOWS\\system32\\uxtheme.dll",
+    "C:\\WINDOWS\\System32\\combase.dll",
+    "C:\\WINDOWS\\system32\\mswsock.dll",
+    "C:\\WINDOWS\\System32\\kernel.appcore.dll",
+    "C:\\WINDOWS\\System32\\NSI.dll",
+    "C:\\WINDOWS\\SYSTEM32\\dhcpcsvc6.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\dhcpcsvc.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\DNSAPI.dll",
+    "C:\\Windows\\System32\\rasadhlp.dll",
+    "C:\\WINDOWS\\System32\\fwpuclnt.dll",
+    "C:\\WINDOWS\\SYSTEM32\\ntmarta.dll",
+    "C:\\WINDOWS\\system32\\napinsp.dll",
+    "C:\\WINDOWS\\system32\\pnrpnsp.dll",
+    "C:\\WINDOWS\\System32\\winrnr.dll",
+    "C:\\WINDOWS\\system32\\NLAapi.dll",
+    "C:\\WINDOWS\\system32\\wshbth.dll"
+  ]
+}
