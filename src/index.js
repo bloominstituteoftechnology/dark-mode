@@ -4,11 +4,13 @@ import axios from "axios";
 
 import Charts from "./components/Charts";
 import Navbar from "./components/Navbar";
+import localStorage from './hooks/useLocalStorage'
 
 import "./styles.scss";
 
 const App = () => {
   const [coinData, setCoinData] = useState([]);
+  const [local, setLocal]=localStorage('Key');
 
   useEffect(() => {
     axios
@@ -19,7 +21,11 @@ const App = () => {
       .catch(err => console.log(err));
   }, []);
   return (
-    <div className={darkmode ? "dark-mode App" : "App"}>
+    
+    <div className="App">
+      {
+        JSON.stringify(local)
+      }
       <Navbar />
       <Charts coinData={coinData} />
     </div>
