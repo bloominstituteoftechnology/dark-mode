@@ -22,6 +22,7 @@ const App = () => {
     <div className={darkmode ? "dark-mode App" : "App"}>
       <Navbar />
       <Charts coinData={coinData} />
+      <h1>Hello</h1>
     </div>
   );
 };
