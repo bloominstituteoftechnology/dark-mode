@@ -1,4 +1,4 @@
-import {useState, useEffect} from "react";
+import {useState} from "react";
 
 const useMedia = (queries, values, defaultValue) => {
 	const mediaQueryList = queries.map(q => { return window.matchMedia(q)});
@@ -8,16 +8,8 @@ const useMedia = (queries, values, defaultValue) => {
 		return typeof values[index] !== 'undefined' ? values[index] : defaultValue;
 	};
 
-	const [value, setValue] = useState(getValue);
+	const value  = useState(getValue);
 	return value;
-
-	// useEffect( () => {
-	// 	const handler = () => setValue(getValue);
-	// 	mediaQueryList.forEach(mql => mql.addListener(handler));
-	// 	return () => mediaQueryList.forEach(mql => mql.removeListener(handler));
-	// 	}, 
-	// 	[]
-	// );
 };
 
 export default useMedia;
