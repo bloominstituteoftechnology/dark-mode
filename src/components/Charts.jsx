@@ -1,7 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import Chart from "./Chart";
 
 const Charts = ({ coinData }) => {
+  const [localStorage, setLocalStorage] = useState('')
+
   return (
     <div className="charts">
       {coinData.map(coin => (
