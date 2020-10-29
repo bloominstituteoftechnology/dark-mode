@@ -5,7 +5,7 @@ export const useLocalStorage = (key, initialValue)=> {
     //2. if we already have a value set for localStorage, make our value that.
     //3. if we don't have a value set for localStorage, make our value initiaiValue.
     const [storedValue, setStoredValue] = useState(()=>{
-        const item = window.localStorage.setItem(key);
+        const item = window.localStorage.setItem(key, initialValue);
         return item ? JSON.parse(item) : initialValue;
     });
 
