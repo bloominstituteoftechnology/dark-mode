@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import {Link} from 'react-router-dom';
 
 const Navbar = (props) => {
   const toggleMode = e => {
@@ -7,7 +8,14 @@ const Navbar = (props) => {
   };
   return (
     <nav className="navbar">
+      <Link to="/" className="navlink">
       <h1>Crypto Tracker</h1>
+      </Link>
+      
+      <Link to="/info" className="navlink">
+      <h2>Coin List Info</h2>
+      </Link>
+
       <div className="dark-mode__toggle">
         <div
           onClick={toggleMode}
