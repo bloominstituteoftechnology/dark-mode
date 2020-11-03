@@ -246,8 +246,28 @@ text-align: left;
   color: #fff;
   background-color: #313843;
 
-  .navbar {
+  .navbar  {
     background-color: #1F2022;
     border: none;
   }
+  .navlink{
+    color:snow;
+  }
+}
+
+.navlink{
+  text-decoration: none;
+  color:orange;
+}
+
+.coin{
+  margin:2rem auto;
+  padding:1rem,1rem;
+  font-size: 2rem;
+  font-style: bold;
+  width:40rem;
+  max-width: 100%;
+  color:orange;
+  border-radius: 5px;
+  background-color: papayawhip;
 }
