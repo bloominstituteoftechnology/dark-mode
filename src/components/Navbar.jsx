@@ -11,7 +11,7 @@ const Navbar = (props) => {
       <div className="dark-mode__toggle">
         <div
           onClick={toggleMode}
-          className={props.darkMode ? 'toggle toggled' : 'toggle'}
+          className={props.darkMode ? 'dark-mode  toggle toggled' : 'toggle'}
         />
       </div>
     </nav>
