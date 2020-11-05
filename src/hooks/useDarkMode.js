@@ -1,9 +1,9 @@
 import useLocalStorage from './useLocalStorage';
-import useUserPreference from './useUserPreference';
+import usePrefersDarkMode from './usePrefersDarkMode';
 
 const useDarkMode = () => {
   const [darkMode, setDarkMode] = useLocalStorage("dark-mode-enabled")
-  const userPreference = useUserPreference();
+  const userPreference = usePrefersDarkMode();
   const enabled = typeof darkMode !== 'undefined' ? darkMode : userPreference;
   return [enabled, setDarkMode]
 }
