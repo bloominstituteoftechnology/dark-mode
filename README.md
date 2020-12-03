@@ -8,6 +8,7 @@ This project allows you to practice the concepts and techniques learned in this 
 
 ### Commits
 
+
 Commit your code regularly and meaningfully. This helps you and any collaborators in case you ever need to return to old code for any number of reasons.
 
 ### Description
