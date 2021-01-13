@@ -8,7 +8,10 @@ import useLocalStorage from "./hooks/useLocalStorage";
 
 const App = () => {
 	const [coinData, setCoinData] = useState([]);
-	const [darkMode, setDarkMode] = useLocalStorage(false);
+	const [darkMode, setDarkMode] = useLocalStorage(
+		"Theme Preference: Dark Mode",
+		false
+	);
 
 	useEffect(() => {
 		axios
