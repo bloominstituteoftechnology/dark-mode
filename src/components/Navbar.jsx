@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const Navbar = (props) => {
   const toggleMode = e => {
     e.preventDefault();
-    props.setDarkMode(!props.darkMode);
+    props.toggleMode(!props.darkMode);
   };
   return (
     <nav className="navbar">
@@ -19,3 +19,6 @@ const Navbar = (props) => {
 };
 
 export default Navbar;
+
+// PASS IN TOGGLE THROUGH USEDARKMODE HOOK? 
+// do you need this in the hook anymore?
