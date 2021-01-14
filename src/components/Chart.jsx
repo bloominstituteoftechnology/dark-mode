@@ -1,5 +1,5 @@
-import React from "react";
-import moment from "moment";
+import React from "react"
+import moment from "moment"
 import {
   LineChart,
   Line,
@@ -7,24 +7,24 @@ import {
   XAxis,
   YAxis,
   Tooltip
-} from "recharts";
+} from "recharts"
 
 const Chart = ({ sparklineData }) => {
   const formattedData = sparklineData
     .map((price, idx) => {
       if (idx % 6 === 0) {
-        const timeToSubtract = 168 - idx;
+        const timeToSubtract = 168 - idx
         const date = moment()
           .subtract(timeToSubtract, "hours")
-          .format("ddd h:mma");
-        return { value: price, date };
+          .format("ddd h:mma")
+        return { value: price, date }
       } else if (idx === sparklineData.length - 1) {
-        const date = moment().format("ddd h:mma");
-        return { value: price, date };
+        const date = moment().format("ddd h:mma")
+        return { value: price, date }
       }
-      return null;
+      return null
     })
-    .filter(data => data);
+    .filter(data => data)
 
   return (
     <LineChart width={1100} height={300} data={formattedData}>
@@ -34,7 +34,7 @@ const Chart = ({ sparklineData }) => {
       <YAxis />
       <Tooltip />
     </LineChart>
-  );
-};
+  )
+}
 
-export default Chart;
+export default Chart
