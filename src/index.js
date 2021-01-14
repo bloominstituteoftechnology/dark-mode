@@ -10,6 +10,10 @@ import "./styles.scss";
 const App = () => {
   const [coinData, setCoinData] = useState([]);
   const [darkMode, setDarkMode] = useState(false);
+console.log(darkMode)
+  useEffect(() => {
+    localStorage.setItem('dark', JSON.stringify(darkMode))
+  }, [darkMode])
 
   useEffect(() => {
     axios
