@@ -64,16 +64,7 @@ const [storedValue, setStoredValue] = useState(() => {
 - Now, let's return `storedValue` from this hook in an array:
 
 ```js
-import { useState } from "react";
 
-export const useLocalStorage = (key, initialValue) => {
-  const [storedValue, setStoredValue] = useState(() => {
-    const item = window.localStorage.getItem(key);
-    return item ? JSON.parse(item) : initialValue;
-  });
-
-  return [storedValue];
-};
 ```
 
 - Remember we're trying to use this hook like this: `const [name, setName] = useLocalStorage('name', 'Dustin')`. So far we have made the value part of the hook, but not the setter. Let's go ahead and create a setter function, and return that in the array as well.
