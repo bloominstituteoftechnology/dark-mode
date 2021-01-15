@@ -1,17 +1,19 @@
 import { useState } from 'react';
 
-const useLocalStorage = (key, initialValue) => {
+export const useLocalStorage = (key, initialValue) => {
     const [storedValue, setStoredValue] = useState(() => {
-        const item = window.localStorage.getItem(key);
-        return item ? JSON.parse(item) : initialValue;
+        // Function needs to check if we have a value in localstorage already
+        if (window.localStorage.getItem(key)) {
+            return JSON.parse(window.localStorage.getItem(key));
+        }
+        window.localStorage.setItem(key, JSON.stringify(initialValue));
+        return initialValue;
     });
-
-    const setValue = value => {
-        setStoredValue(value);
+    // Custom setter function that updates state and sets the new value to localstorage
+    const setValue = (value) => {
         window.localStorage.setItem(key, JSON.stringify(value));
+        setStoredValue(value);
     }
 
     return [storedValue, setValue];
 };
-
-export default useLocalStorage;

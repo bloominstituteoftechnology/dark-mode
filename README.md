@@ -30,7 +30,7 @@ Follow these steps for completing your project.
 - [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into main (student's Repository). **Please don't merge your own pull request**
 - [ ] From the home page of your repo, make sure you have your branch selected
 - [ ] Copy the URL and paste it into Canvas
-  
+
 ## Minimum Viable Product
 
 - [ ] Build a custom hook that let's you save data to localStorage
@@ -39,7 +39,7 @@ Follow these steps for completing your project.
 
 ## STEP 1 - useLocalStorage
 
-Open your app and take a look around. The crypto currency data is being fetched and displayed for you. In `styles.scss`, at the very bottom, you'll notice there are some styles for a class called `dark-mode`. Soon, we'll write a custom hook that sets this class on the body tag. That hook is going to compose a `useLocalStorage` inside it to accomplish that, so let's write the localStorage one first.
+Open your app and take a look around. The crypto currency data is being fetched and displayed for you. In `styles.scss`, at the very bottom, you'll notice there are some styles for a class called `dark-mode`. That hook is going to compose a `useLocalStorage` inside it to accomplish that, so let's write the localStorage one first.
 
 This is going to be a pretty cool hook. It will be used pretty much the same way as `useState`, but with a key and value passed into it - ie `const [name, setName] = useLocalStorage('name', 'Dustin')`. You can use `setName` to update the value of `name` on localStorage! Pretty cool, huh? Let's get to it!
 
@@ -55,25 +55,25 @@ This is going to be a pretty cool hook. It will be used pretty much the same way
 // If that item doesn't exist, it will return undefined
 const [storedValue, setStoredValue] = useState(() => {
   // Get from local storage by key
-  const item = window.localStorage.getItem(key);
+  const item = window.localStorage.getItem(key)
   // Parse and return stored json or, if undefined, return initialValue
-  return item ? JSON.parse(item) : initialValue;
-});
+  return item ? JSON.parse(item) : initialValue
+})
 ```
 
 - Now, let's return `storedValue` from this hook in an array:
 
 ```js
-import { useState } from "react";
+import { useState } from 'react'
 
 export const useLocalStorage = (key, initialValue) => {
   const [storedValue, setStoredValue] = useState(() => {
-    const item = window.localStorage.getItem(key);
-    return item ? JSON.parse(item) : initialValue;
-  });
+    const item = window.localStorage.getItem(key)
+    return item ? JSON.parse(item) : initialValue
+  })
 
-  return [storedValue];
-};
+  return [storedValue]
+}
 ```
 
 - Remember we're trying to use this hook like this: `const [name, setName] = useLocalStorage('name', 'Dustin')`. So far we have made the value part of the hook, but not the setter. Let's go ahead and create a setter function, and return that in the array as well.
@@ -84,12 +84,12 @@ export const useLocalStorage = (key, initialValue) => {
   - `setValue` should look something like this:
 
 ```js
-const setValue = value => {
+const setValue = (value) => {
   // Save state
-  setStoredValue(value);
+  setStoredValue(value)
   // Save to local storage
-  window.localStorage.setItem(key, JSON.stringify(value));
-};
+  window.localStorage.setItem(key, JSON.stringify(value))
+}
 ```
 
 We're going to use this inside our dark mode hook, but this can be used anywhere for any kind of localStorage needs you have in your apps. Custom hooks are so awesome!!
