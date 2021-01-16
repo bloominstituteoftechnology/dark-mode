@@ -53,27 +53,12 @@ This is going to be a pretty cool hook. It will be used pretty much the same way
 ```js
 // To retrieve an item from localStorage, call localStorage.getItem('itemName')
 // If that item doesn't exist, it will return undefined
-const [storedValue, setStoredValue] = useState(() => {
-  // Get from local storage by key
-  const item = window.localStorage.getItem(key);
-  // Parse and return stored json or, if undefined, return initialValue
-  return item ? JSON.parse(item) : initialValue;
-});
-```
+
 
 - Now, let's return `storedValue` from this hook in an array:
 
 ```js
-import { useState } from "react";
 
-export const useLocalStorage = (key, initialValue) => {
-  const [storedValue, setStoredValue] = useState(() => {
-    const item = window.localStorage.getItem(key);
-    return item ? JSON.parse(item) : initialValue;
-  });
-
-  return [storedValue];
-};
 ```
 
 - Remember we're trying to use this hook like this: `const [name, setName] = useLocalStorage('name', 'Dustin')`. So far we have made the value part of the hook, but not the setter. Let's go ahead and create a setter function, and return that in the array as well.
