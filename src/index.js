@@ -6,10 +6,13 @@ import Charts from "./components/Charts";
 import Navbar from "./components/Navbar";
 
 import "./styles.scss";
+import "./hooks/userDarkMode";
+import useDarkMode from "./hooks/userDarkMode";
+
 
 const App = () => {
   const [coinData, setCoinData] = useState([]);
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useDarkMode('darkmode','');
 
   useEffect(() => {
     axios
