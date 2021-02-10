@@ -6,10 +6,19 @@ import Charts from "./components/Charts";
 import Navbar from "./components/Navbar";
 
 import "./styles.scss";
+import { useDarkMode } from './hook/useDarkMode'
+
+// import { useLocalStorage } from './hook/useLocalStorage'
 
 const App = () => {
   const [coinData, setCoinData] = useState([]);
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useDarkMode(false);
+  // const [counter, setCounter]=useLocalStorage('count', 0)
+//function add1 () {
+// setCounter(counter+1)
+// }
+  
+
 
   useEffect(() => {
     axios
@@ -23,6 +32,10 @@ const App = () => {
     <div className={darkMode ? "dark-mode App" : "App"}>
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
       <Charts coinData={coinData} />
+      {/* <h1>
+      {counter}
+      <button onClick={add1}>Button</button>
+      </h1> */}
     </div>
   );
 };
