@@ -2,11 +2,11 @@ import React from 'react';
 import useLocalStorage from './useLocalStorage'
 
 
-const useDarkMode = (key) => {
+const useDarkMode = (key, value) => {
 
-  const [storedValue, setValue]= useLocalStorage(key);
+  const [darkMode, setDarkMode] = useLocalStorage(key, value);
 
-  return [storedValue, setValue];
+  return [darkMode, setDarkMode];
 };
 
 export default useDarkMode;

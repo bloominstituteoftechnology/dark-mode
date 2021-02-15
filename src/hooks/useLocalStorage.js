@@ -20,7 +20,7 @@ const useLocalStorage = (key, initialValue) => {
     window.localStorage.setItem(key, JSON.stringify(value));
   };
 
-  return [storedValue, setValue];
+  return [storedValue, setStoredValue];
 }; // returns an array with a value and a setter in an array, exactly like the state hook
 
 export default useLocalStorage;
