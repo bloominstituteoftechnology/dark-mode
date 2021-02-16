@@ -121,7 +121,8 @@ After finishing your required elements, you can push your work further. These go
 
 - Look at [this implementation](https://usehooks.com/useDarkMode/) of a `useDarkMode` hook that has more logic built into it (ignore the `useEffect` hook which has some direct DOM manipulation). In your `useDarkMode` hook, build in the `usePrefersDarkMode` logic that will check to see what you have set your OS theme preference to and apply that to your site.
 
-- Add routing into this app and build out some other pages
+[x] Add routing into this app and build out some other pages
+[x] npm install --save react-router-dom
 
 - Go to the [Coin Gecko API](https://www.coingecko.com/) where we got this data from, and add more features to your app. Maybe you want to make a dropdown list of coins, and only look at one coin at a time. You could make an API call to that API for a specific coin and get more data on it. You could get more specific coin data for the last 24 hrs. There's a lot you can do with this API. Explore and have fun!
 
@@ -129,6 +130,6 @@ After finishing your required elements, you can push your work further. These go
 
 ## Submission Format
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into `main` (student's Repository). **Please don't merge your own pull request**
-- [ ] From the home page of your repo, make sure you have your branch selected
-- [ ] Copy the URL and paste it into Canvas to submit your project
+- [x] Submit a Pull-Request to merge <firstName-lastName> Branch into `main` (student's Repository). **Please don't merge your own pull request**
+- [x] From the home page of your repo, make sure you have your branch selected
+- [x] Copy the URL and paste it into Canvas to submit your project
