@@ -7,10 +7,12 @@
     "@testing-library/react": "^9.4.1",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
+    "browser-router": "^0.2.0",
     "moment": "^2.24.0",
     "node-sass": "^4.13.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
+    "react-router": "^5.2.0",
     "react-scripts": "3.4.0",
     "recharts": "^2.0.0-beta.1"
   },
