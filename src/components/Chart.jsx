@@ -27,7 +27,6 @@ const Chart = ({ sparklineData, darkMode }) => {
     .filter(data => data);
 
   return (
-    // className={darkMode ? "dark-mode App" : "App"}
     <LineChart width={1100} height={300} data={formattedData}>
       <Line type="monotone" dataKey="value"
       stroke={darkMode ? "#fe019a"  : "#8884d8"} />

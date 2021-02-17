@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import { Route, Switch } from 'react-router-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
-
+import { Route, Switch } from 'react-router-dom';
 
 import Home from "./Home";
 import CoinPage from "./CoinPage";
@@ -19,16 +18,7 @@ const App = () => {
   useDarkMode(darkMode); // returning [storedValue, setValue]
 
   return (
-    
     <Switch>
-      {/* <Route path='/movies/saved'>
-        <SavedList list={saved} />
-      </Route> */}
-    
-      
-      {/* <Route path='/movies/:movieId'>
-        <MovieCard movieList={movieList}/>
-      </Route> */}
 
       <Route exact path='/coins/:coinId'>
         <CoinPage darkMode={darkMode} setDarkMode={setDarkMode} coinData={coinData} setCoinData={setCoinData}/>
@@ -37,8 +27,8 @@ const App = () => {
       <Route exact path={'/'}>
         <Home darkMode={darkMode} setDarkMode={setDarkMode} coinData={coinData} setCoinData={setCoinData} />
       </Route>
-    </Switch>
 
+    </Switch>
   );
 };
 

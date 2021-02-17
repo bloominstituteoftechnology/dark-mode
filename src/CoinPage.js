@@ -1,49 +1,29 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import { useParams } from 'react-router-dom';
-
 import axios from "axios";
-
+// import components
 import Navbar from "./components/Navbar";
 import DropdownCoins from "./components/DropdownCoins";
 import Stats from "./components/Stats";
 import Chart from "./components/Chart";
-
-
+// import hooks
 import useDarkMode from "./hooks/useDarkMode";
-
-
-// import { makeStyles } from '@material-ui/core/styles';
+// import material UI components
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
-// import MenuIcon from '@material-ui/icons/Menu';
-
-
+// import scss & bootsrap
 import "./styles.scss";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const CoinPage = (props) => {
-  // const [coinData, setCoinData] = useState([]);
-  // const [darkMode, setDarkMode] = useState(false);
-  const { darkMode, setDarkMode, coinData, setCoinData } = props;
+const CoinPage = ({ darkMode, setDarkMode, coinData, setCoinData }) => {
 
   let { coinId } = useParams(); 
   let coinObj = coinData.find(coinObj => {
     return coinObj.id === coinId
-  })
-
-  // const useStyles = makeStyles((theme) => ({
-  //   root: {
-  //     flexGrow: 1,
-  //   },
-  //   menuButton: {
-  //     marginRight: theme.spacing(2),
-  //   },
-  // }));
-
-  console.log("coinId: ", coinId);
+  }) // get coinObj from coinId & useParams()
 
   useEffect(() => {
     axios
@@ -55,32 +35,35 @@ const CoinPage = (props) => {
       })
       .catch(err => console.log(err));
 
-  }, []);
+  }, []); // API call to populate data for indiv coinObj
 
-  // className={classes.menuButton}
 
   if (coinObj) {
     return (
       <div className={darkMode ? "dark-mode App" : "App"}>
 
         <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-        
 
-        {/* <div className={classes.root}> */}
-      <AppBar position="static">
-        <Toolbar variant="dense">
-          <IconButton edge="start"  color="inherit" aria-label="menu">
+        <AppBar position="static">
+          <Toolbar variant="dense">
+            <Typography variant="h4" color="inherit">
+              {(coinObj.symbol).toUpperCase()}
+              
+            </Typography>
+            <DropdownCoins coinData={coinData}/>
+          </Toolbar>
+        </AppBar>
 
-          </IconButton>
-          <Typography variant="h4" color="inherit">
-            {(coinObj.symbol).toUpperCase()}
-            
-          </Typography>
-          <DropdownCoins coinData={coinData}/>
-        </Toolbar>
-      </AppBar>
-    {/* </div> */}
         <Stats coinObj={coinObj}/>
+
+        <AppBar position="static">
+          <Toolbar variant="dense">
+            <Typography variant="h4" color="inherit">
+              {(coinObj.symbol).toUpperCase()}
+            </Typography>
+          </Toolbar>
+        </AppBar>
+
         <Chart sparklineData={coinObj.sparkline_in_7d.price}/>
       </div>
     );
@@ -88,10 +71,6 @@ const CoinPage = (props) => {
   else {
     return <div>Not defined</div>
   }
-
-
 };
 
 export default CoinPage;
-
-// sparklineData={coin.sparklineData}

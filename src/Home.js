@@ -11,10 +11,7 @@ import useDarkMode from "./hooks/useDarkMode";
 import "./styles.scss";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const Home = (props) => {
-  
-  // const [darkMode, setDarkMode] = useState(false);
-  const { darkMode, setDarkMode, coinData, setCoinData } = props;
+const Home = ({ darkMode, setDarkMode, coinData, setCoinData }) => {
 
   useEffect(() => {
     axios
@@ -25,12 +22,10 @@ const Home = (props) => {
         console.log("res.data: ", res.data)
       })
       .catch(err => console.log(err));
-
-  }, []);
+  }, []); // API call to populate coinData 
 
   return (
     <div className={darkMode ? "dark-mode App" : "App"}>
-      
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
       <DropdownCoins coinData={coinData}/>
       <Charts darkMode={darkMode} coinData={coinData} />
