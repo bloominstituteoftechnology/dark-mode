@@ -152,9 +152,14 @@ h4 {
   font-size: 1.4rem;
 }
 
+p {
+  line-height: 1.7;
+}
+
 img {
   height: auto;
   width: 100%;
+  margin: 0 2rem;
 }
 
 .flex-spacer {
@@ -165,11 +170,14 @@ img {
   font-family: sans-serif;
   text-align: center;
   width: 100%;
+  background-color: #FAF0E6;
 }
 
 .navbar {
   align-items: center;
   border-bottom: 1px solid rgb(221, 221, 221);
+  background-color: #f68819;
+  color: white;
   display: flex;
   height: 70px;
   justify-content: space-between;
@@ -213,7 +221,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 50px 0 0;
+  margin: 10rem 0 0;
   width: 100%;
 }
 
@@ -240,14 +248,73 @@ text-align: left;
 
 .coin__logo {
   width: 50px;
+  display: flex;
+  align-items: center;
+  margin: 0 3rem;
 }
 
 .dark-mode {
-  color: #fff;
-  background-color: #313843;
+  color: lime;
+  background-color: black;
 
   .navbar {
     background-color: #1F2022;
+    color: lime;
     border: none;
   }
+  
+  .dark-mode__toggle {
+    background-color: #444;
+  }
+
+  .toggle {
+    background-color: lime;
+  }
+
+  .coin_header {
+    border: .1rem solid lime;
+    box-shadow: .5rem .5rem 1.5rem lime;
+    margin-bottom: 3rem;
+    padding: 1rem 2rem;
+  }
+
+  .stat-sheet {
+    color: lime; 
+    box-shadow: 0 0 1rem lime;
+  }
+}
+
+.darkmode {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.5;
+}
+
+.coin_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border: .1rem solid #f68819;
+  box-shadow: .5rem .5rem #f68819;
+  margin-bottom: 3rem;
+  padding: 1rem 2rem;
+
+}
+
+.market_cap {
+  margin-left: 9rem;
+}
+
+.stat-sheet {
+  background-color: #222;
+  color: white;
+  padding: 2rem 3rem;
+  margin-bottom: 3rem;
+ 
 }
