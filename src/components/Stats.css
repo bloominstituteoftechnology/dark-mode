@@ -1,0 +1,8 @@
+.card-container {
+  background-image: url("https://cdn.pixabay.com/photo/2017/08/15/08/53/bitcoin-2643159_1280.jpg");
+  background-attachment: fixed;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+}
