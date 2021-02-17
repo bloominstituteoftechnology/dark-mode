@@ -8,7 +8,7 @@ const Navbar = (props) => {
   return (
     <nav className="navbar">
       <div>
-        <h1>Cryptotrack</h1>
+        <h1>Cryptonics</h1>
         <p>Real Time Crypto Currency Tracker</p>
       </div>
       <div className='darkmode'>
