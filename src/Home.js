@@ -33,7 +33,7 @@ const Home = (props) => {
       
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
       <DropdownCoins coinData={coinData}/>
-      <Charts coinData={coinData} />
+      <Charts darkMode={darkMode} coinData={coinData} />
     </div>
   );
 };

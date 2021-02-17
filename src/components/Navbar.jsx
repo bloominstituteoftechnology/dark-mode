@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import DropdownCoins from "./DropdownCoins";
 
 const Navbar = (props) => {
+  let { coinData } = props;
+
   const toggleMode = e => {
     e.preventDefault();
     props.setDarkMode(!props.darkMode);
@@ -8,6 +11,7 @@ const Navbar = (props) => {
   return (
     <nav className="navbar">
       <h1>Crypto Tracker</h1>
+
       <div className="dark-mode__toggle">
         <div
           onClick={toggleMode}

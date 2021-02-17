@@ -23,6 +23,7 @@ const DropdownCoins = (props) => {
         Coins
       </DropdownToggle>
       <DropdownMenu>
+        <DropdownItem name="home" onClick={(evt) => history.push(`/`)}>All</DropdownItem>
         {coinData.map(coinObject => {
           return <DropdownItem name={coinObject.id} onClick={(evt) => history.push(`/coins/${coinObject.id}`)}>{coinObject.name}</DropdownItem>
         })}

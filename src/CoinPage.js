@@ -4,11 +4,22 @@ import { useParams } from 'react-router-dom';
 
 import axios from "axios";
 
-import Chart from "./components/Chart";
 import Navbar from "./components/Navbar";
 import DropdownCoins from "./components/DropdownCoins";
+import Stats from "./components/Stats";
+import Chart from "./components/Chart";
+
 
 import useDarkMode from "./hooks/useDarkMode";
+
+
+// import { makeStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import IconButton from '@material-ui/core/IconButton';
+// import MenuIcon from '@material-ui/icons/Menu';
+
 
 import "./styles.scss";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -19,11 +30,18 @@ const CoinPage = (props) => {
   const { darkMode, setDarkMode, coinData, setCoinData } = props;
 
   let { coinId } = useParams(); 
-  let coin = coinData.find(coinObj => {
+  let coinObj = coinData.find(coinObj => {
     return coinObj.id === coinId
   })
-  console.log("coin: ", coin)
-  // PICK IT UP HERE... now you have the coin obj.. feed it into the coin chart with linespark  
+
+  // const useStyles = makeStyles((theme) => ({
+  //   root: {
+  //     flexGrow: 1,
+  //   },
+  //   menuButton: {
+  //     marginRight: theme.spacing(2),
+  //   },
+  // }));
 
   console.log("coinId: ", coinId);
 
@@ -39,14 +57,39 @@ const CoinPage = (props) => {
 
   }, []);
 
-  return (
-    <div className={darkMode ? "dark-mode App" : "App"}>
-      <p>COINPAGE</p>
-      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-      <DropdownCoins coinData={coinData}/>
-      {/* <Chart /> */}
-    </div>
-  );
+  // className={classes.menuButton}
+
+  if (coinObj) {
+    return (
+      <div className={darkMode ? "dark-mode App" : "App"}>
+
+        <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+        
+
+        {/* <div className={classes.root}> */}
+      <AppBar position="static">
+        <Toolbar variant="dense">
+          <IconButton edge="start"  color="inherit" aria-label="menu">
+
+          </IconButton>
+          <Typography variant="h4" color="inherit">
+            {(coinObj.symbol).toUpperCase()}
+            
+          </Typography>
+          <DropdownCoins coinData={coinData}/>
+        </Toolbar>
+      </AppBar>
+    {/* </div> */}
+        <Stats coinObj={coinObj}/>
+        <Chart sparklineData={coinObj.sparkline_in_7d.price}/>
+      </div>
+    );
+  }
+  else {
+    return <div>Not defined</div>
+  }
+
+
 };
 
 export default CoinPage;
