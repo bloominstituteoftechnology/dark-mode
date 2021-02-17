@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 
 const useLocalStorage = (key, initialValue) => {
 
@@ -20,7 +20,8 @@ const useLocalStorage = (key, initialValue) => {
             localStorage.setItem(key, JSON.stringify(value));
 
         }
-        // This storeValue will be returned on function call
+        // This storeValue will be returned on function call 
+        console.log(setValue)
         return [storedValue, setStoredValue]
 
 };
