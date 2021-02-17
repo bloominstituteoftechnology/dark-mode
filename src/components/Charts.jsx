@@ -29,7 +29,7 @@ const Charts = ({ coinData }) => {
               <h4>Current Price: {coin.current_price}</h4>
               <h4>24 Hr High: {coin.high_24h}</h4>
               <h4>24 Hr Low: {coin.low_24h}</h4>
-              <h4>24 Hr Price Change: {coin.price_change_24hr}</h4>
+              <h4>24 Hr Price Change: {coin.price_change_24h}</h4>
               <h4>
                 24 Hr Change Percentage: {coin.price_change_percentage_24h}%
               </h4>
