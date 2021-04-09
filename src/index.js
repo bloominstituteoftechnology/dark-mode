@@ -19,7 +19,6 @@ const App = () => {
       )
       .then(res => {
         setCoinData(res.data)
-        console.log(res.data)
       })
       .catch(err => console.log(err));
   }, []);
