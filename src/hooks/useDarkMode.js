@@ -1,3 +1,4 @@
+import React from 'react'
 import { useLocalStorage } from './useLocalStorage'
 
 export const useDarkMode = (key, initialValue) => {
@@ -14,5 +15,5 @@ const setMode = (modeValue) => {
     setStateMode(modeValue);
     localStorage.setItem(key, JSON.stringify(modeValue))
 }
-return [mode, setMode]
+return [ mode, setMode ]
 }
