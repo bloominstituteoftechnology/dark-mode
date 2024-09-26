@@ -24,7 +24,7 @@ const App = () => {
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
       <Charts coinData={coinData} />
     </div>
-  );
+  ); 
 };
 
 const rootElement = document.getElementById("root");
